@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import modin.pandas as md
-import file_operations as fop
+import file-operations as fop
 
 # constants
 ROOT_DIR        = "./reports" # raw data
