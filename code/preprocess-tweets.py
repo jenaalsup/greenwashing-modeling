@@ -30,6 +30,8 @@ for i in range(len(df)):
     print(df[i]["text"])
 print(len(df))
 
+# convert from json to pandas
+
 # notes:
 # total # of tweets: 41,000
 # energy companies not represented: schlumberger, eog resources

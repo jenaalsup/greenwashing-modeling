@@ -21,8 +21,8 @@ COUNTVECTOR_FILEPATH = "countvec.obj"
 def basic_clean(df):
     df['speech'] = df['speech'].astype('str')
     df = df.drop_duplicates(keep="first")
-    df['speech'] = df['speech'].str.lower()
-    df['speech'] = df['speech'].str.replace(r'[^\w\s\d]+', '') # TODO: what does this do?
+    df['speech'] = df['speech'].str.lower() # lowercase
+    df['speech'] = df['speech'].str.replace(r'[^\w\s\d]+', '') # remove digits and punctuation
     return df
 
 porter_stemmer = PorterStemmer()
@@ -35,25 +35,6 @@ inDir = os.path.join(ROOT_DIR, INDIR)
 dl = sorted(fop.get_files_in_dir(ROOT_DIR)) # put files in chronological order
 print(dl)
 
-for i, f in enumerate(dl):
-    path_in = os.path.join(inDir,f)
-    print(path_in)
-    # TODO: can read_csv work with txt files? - the following line causes an error
-    #df = md.read_csv(path_in, sep="|",encoding='cp1252',on_bad_lines='skip' ,engine="python" ,names = ['speech_id','speech'],usecols=['speech_id','speech'])
-
-# TODO: what does this for loop do?
-for i, f in enumerate(dl):
-    source_path = os.path.join(ROOT_DIR, RAW_DATA_PREFIX + f)
-    for j,chunk in enumerate(pd.read_csv(source_path, chunksize=200000)):
-        nrows = chunk.shape[0]
-        if nrows==200000:
-            chunk.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + Path(f).stem+'_'+str(j)+'.txt'), index=False) 
-        if j>0:
-            chunk.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + Path(f).stem+'_'+str(j)+'.txt'), index=False) 
-
-
-# TODO: where is the rest of the code being used?
-
 stop_words  = (stopwords.words('english'))
 added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","ours","ourselves","use",
                "you","your","yours","that","f","e","s","t","c","n","u","v","l","p","d","b","g","k","m","x","y","z",
@@ -63,11 +44,18 @@ added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","our
                "go","going","let","would","make","like","come","us"]
 stop_words= list(np.append(stop_words,added_words))
 
+# tokenizes data
 countvec = CountVectorizer( stop_words = stop_words,
                             lowercase = True,
                             ngram_range = (1, 2), # allow for bigrams
                             max_df = 10000, # remove words with > 10,000 occurrences
                             min_df = 20)# remove words with < 20 occurrencees
 
+for i, f in enumerate(dl):
+    path_in = os.path.join(ROOT_DIR,f) # was inDir before
+    print(path_in)
+    #df = md.read_csv(path_in, sep="|",encoding='cp1252',on_bad_lines='skip' ,engine="python" ,names = ['speech_id','speech'],usecols=['speech_id','speech'])
+    df = pd.read_csv(path_in, sep=" ") # add columns
+    # TODO: finish this function
 
 
