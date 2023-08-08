@@ -54,8 +54,16 @@ countvec = CountVectorizer( stop_words = stop_words,
 for i, f in enumerate(dl):
     path_in = os.path.join(ROOT_DIR,f) # was inDir before
     print(path_in)
-    #df = md.read_csv(path_in, sep="|",encoding='cp1252',on_bad_lines='skip' ,engine="python" ,names = ['speech_id','speech'],usecols=['speech_id','speech'])
-    df = pd.read_csv(path_in, sep=" ") # add columns
-    # TODO: finish this function
+    df = pd.read_csv(path_in, encoding='cp1252', sep=" ", header=None, names = ['speech_id','speech'], usecols=['speech_id','speech']) # add columns
+    df = df[df['speech'].notnull()] # remove empty speeches
+    df['speech'] = df['speech'].apply(stem_sentence) # stem the speeches
+    #mempool = cp.get_default_memory_pool()
+    #mempool.free_all_blocks()
+    df = basic_clean(df) # remove duplicates and punctuation - TODO: giving a warning
+    mask = df['speech'].str.len() > 15 # more than 15 characters
+    df   = df.loc[mask]
+    print(df.head())
+    df.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + f), index=False) 
+
 
 
