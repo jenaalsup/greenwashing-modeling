@@ -19,10 +19,10 @@ GENSIM_CORPUS_FILEPATH = "corpus.obj"
 COUNTVECTOR_FILEPATH = "countvec.obj"
 
 def basic_clean(df):
-    df['speech'] = df['speech'].astype('str')
+    df['text'] = df['text'].astype('str')
     df = df.drop_duplicates(keep="first")
-    df['speech'] = df['speech'].str.lower() # lowercase
-    df['speech'] = df['speech'].str.replace(r'[^\w\s\d]+', '') # remove digits and punctuation
+    df['text'] = df['text'].str.lower() # lowercase
+    df['text'] = df['text'].str.replace(r'[^\w\s\d]+', '') # remove digits and punctuation
     return df
 
 porter_stemmer = PorterStemmer()
@@ -51,19 +51,27 @@ countvec = CountVectorizer( stop_words = stop_words,
                             max_df = 10000, # remove words with > 10,000 occurrences
                             min_df = 20)# remove words with < 20 occurrencees
 
+# countvec.vocabulary_
+# name of company, year, type of company - add columns to dataframe, rows at document level
+df = pd.DataFrame()
 for i, f in enumerate(dl):
     path_in = os.path.join(ROOT_DIR,f) # was inDir before
+    with open(path_in, encoding='cp1252') as file:
+        #print(file.read())
+        info = [file.read()]
+
     print(path_in)
-    df = pd.read_csv(path_in, encoding='cp1252', sep=" ", header=None, names = ['speech_id','speech'], usecols=['speech_id','speech']) # add columns
-    df = df[df['speech'].notnull()] # remove empty speeches
-    df['speech'] = df['speech'].apply(stem_sentence) # stem the speeches
+    #df = pd.read_csv(path_in, encoding='cp1252', header=None, names = ['text']) # add columns
+    df_temp = pd.DataFrame([info], columns=['text'])
+    df_temp = df_temp[df_temp['text'].notnull()] # remove empty speech
+    df_temp['text'] = df_temp['text'].apply(stem_sentence) # stem the textes
     #mempool = cp.get_default_memory_pool()
     #mempool.free_all_blocks()
-    df = basic_clean(df) # remove duplicates and punctuation - TODO: giving a warning
-    mask = df['speech'].str.len() > 15 # more than 15 characters
-    df   = df.loc[mask]
-    print(df.head())
-    df.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + f), index=False) 
+    df_temp = basic_clean(df_temp) # remove duplicates and punctuation - TODO: giving a warning
+    mask = df_temp['text'].str.len() > 15 # more than 15 characters
+    df_temp = df_temp.loc[mask]
+    #print(df_temp.head())
+    df = pd.concat([df, df_temp], axis=0)
 
-
-
+print(df.head())
+df.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + 'processed-data.csv'), index=False) 

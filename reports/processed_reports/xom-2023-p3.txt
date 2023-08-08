@@ -1,2 +1,0 @@
-speech_id,speech
-A,technology-neutr
