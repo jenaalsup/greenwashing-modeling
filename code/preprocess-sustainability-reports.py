@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import modin.pandas as md
 import file_operations as fop
+import re # for removing digits using regex
 
 # constants
 ROOT_DIR        = "./reports" # raw data
@@ -18,11 +19,21 @@ CORPUS_FILEPATH_PREFIX = "corpus/"
 GENSIM_CORPUS_FILEPATH = "corpus.obj"
 COUNTVECTOR_FILEPATH = "countvec.obj"
 
+def remove_extra_chars(text): # digits, punctuation, special characters, keep spaces
+    pattern = r'[^a-zA-Z\s]'
+    return re.sub(pattern, '', text)
+
+def remove_digits(text):
+    return re.sub(r'\d', '', text)
+
+# Apply the function to the text_column
+
+
 def basic_clean(df):
     df['text'] = df['text'].astype('str')
     df = df.drop_duplicates(keep="first")
-    df['text'] = df['text'].str.lower() # lowercase
-    df['text'] = df['text'].str.replace(r'[^\w\s\d]+', '') # remove digits and punctuation
+    df['text'] = df['text'].str.lower()
+    df['text'] = df['text'].apply(remove_extra_chars)
     return df
 
 porter_stemmer = PorterStemmer()
@@ -55,22 +66,16 @@ countvec = CountVectorizer( stop_words = stop_words,
 # name of company, year, type of company - add columns to dataframe, rows at document level
 df = pd.DataFrame()
 for i, f in enumerate(dl):
-    path_in = os.path.join(ROOT_DIR,f) # was inDir before
+    path_in = os.path.join(ROOT_DIR,f)
     with open(path_in, encoding='cp1252') as file:
-        #print(file.read())
         info = [file.read()]
 
-    print(path_in)
-    #df = pd.read_csv(path_in, encoding='cp1252', header=None, names = ['text']) # add columns
     df_temp = pd.DataFrame([info], columns=['text'])
     df_temp = df_temp[df_temp['text'].notnull()] # remove empty speech
     df_temp['text'] = df_temp['text'].apply(stem_sentence) # stem the textes
-    #mempool = cp.get_default_memory_pool()
-    #mempool.free_all_blocks()
     df_temp = basic_clean(df_temp) # remove duplicates and punctuation - TODO: giving a warning
     mask = df_temp['text'].str.len() > 15 # more than 15 characters
     df_temp = df_temp.loc[mask]
-    #print(df_temp.head())
     df = pd.concat([df, df_temp], axis=0)
 
 print(df.head())
