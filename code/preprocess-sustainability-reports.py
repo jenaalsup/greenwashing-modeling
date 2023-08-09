@@ -7,12 +7,14 @@ import numpy as np
 import pandas as pd
 import modin.pandas as md
 import file_operations as fop
-import re # for removing digits using regex
+import re
 
 # constants
 ROOT_DIR        = "./reports" # raw data
 INDIR           = "processed_reports/"
 RAW_DATA_PREFIX = "processed_reports/" # save the processed data
+ENERGY_TICKERS = ["XOM", "CVX", "COP", "SLB", "EOG", "MPC", "PXD", "PSX", "VLO", "OXY", "WMB", "HES", "LNG", "KMI", "DVN"]
+CLEAN_ENERGY_TICKERS = ["FSLR", "ENPH", "SEDG", "ED", "PLUG", "ORA", "SHLS", "RUN", "ARRY", "AGR", "NOVA", "CWEN", "GPRE", "SPWR", "FCEL"]
 
 # output relative paths
 CORPUS_FILEPATH_PREFIX = "corpus/"
@@ -55,21 +57,28 @@ vectorizer = CountVectorizer(stop_words = stop_words,
                             max_df = 100000, # remove words with > 10,000 occurrences
                             min_df = 1)# remove words with < 20 occurrencees
 
-# name of company, year, type of company - add columns to dataframe, rows at document level
 df = pd.DataFrame()
-column_names = ['text', 'company-ticker', 'year', 'part'] # add 'company-type', later
+column_names = ['company-type', 'company-ticker', 'year', 'part', 'text'] # add 'company-type', later
 for i, f in enumerate(dl):
     # open file
     path_in = os.path.join(ROOT_DIR,f)
     with open(path_in, encoding='cp1252') as file:
         info = [file.read()]
     
-    # create dataframe
-    filename_parts = f.split("-") # for metadata
-    data = {'text': info,
+    # add metadata
+    filename_parts = f.split("-")
+    company_type = 'N/A'
+    if (filename_parts[0].upper() in ENERGY_TICKERS):
+        company_type = 'energy'
+    if (filename_parts[0].upper() in CLEAN_ENERGY_TICKERS):
+        company_type = 'clean-energy'
+    data = {'company-type': company_type,
             'company-ticker': filename_parts[0],
             'year': filename_parts[1],
-            'part': filename_parts[2]}
+            'part': filename_parts[2][:-4],
+            'text': info,}
+    
+    # create dataframe
     df_temp = pd.DataFrame(data, columns=column_names)
 
     # pre-process speech
