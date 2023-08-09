@@ -23,12 +23,6 @@ def remove_extra_chars(text): # digits, punctuation, special characters, keep sp
     pattern = r'[^a-zA-Z\s]'
     return re.sub(pattern, '', text)
 
-def remove_digits(text):
-    return re.sub(r'\d', '', text)
-
-# Apply the function to the text_column
-
-
 def basic_clean(df):
     df['text'] = df['text'].astype('str')
     df = df.drop_duplicates(keep="first")
@@ -43,8 +37,7 @@ def stem_sentence(sentence):
     return ' '.join(stemmed_tokens)
 
 inDir = os.path.join(ROOT_DIR, INDIR)
-dl = sorted(fop.get_files_in_dir(ROOT_DIR)) # put files in chronological order
-print(dl)
+dl = sorted(fop.get_files_in_dir(ROOT_DIR)) # put files in chronological order by name
 
 stop_words  = (stopwords.words('english'))
 added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","ours","ourselves","use",
@@ -56,27 +49,70 @@ added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","our
 stop_words= list(np.append(stop_words,added_words))
 
 # tokenizes data
-countvec = CountVectorizer( stop_words = stop_words,
+vectorizer = CountVectorizer(stop_words = stop_words,
                             lowercase = True,
                             ngram_range = (1, 2), # allow for bigrams
-                            max_df = 10000, # remove words with > 10,000 occurrences
-                            min_df = 20)# remove words with < 20 occurrencees
+                            max_df = 100000, # remove words with > 10,000 occurrences
+                            min_df = 1)# remove words with < 20 occurrencees
 
-# countvec.vocabulary_
 # name of company, year, type of company - add columns to dataframe, rows at document level
 df = pd.DataFrame()
+column_names = ['text', 'company-ticker', 'year', 'part'] # add 'company-type', later
 for i, f in enumerate(dl):
+    # open file
     path_in = os.path.join(ROOT_DIR,f)
     with open(path_in, encoding='cp1252') as file:
         info = [file.read()]
+    
+    # create dataframe
+    filename_parts = f.split("-") # for metadata
+    data = {'text': info,
+            'company-ticker': filename_parts[0],
+            'year': filename_parts[1],
+            'part': filename_parts[2]}
+    df_temp = pd.DataFrame(data, columns=column_names)
 
-    df_temp = pd.DataFrame([info], columns=['text'])
+    # pre-process speech
     df_temp = df_temp[df_temp['text'].notnull()] # remove empty speech
-    df_temp['text'] = df_temp['text'].apply(stem_sentence) # stem the textes
-    df_temp = basic_clean(df_temp) # remove duplicates and punctuation - TODO: giving a warning
+    df_temp['text'] = df_temp['text'].apply(stem_sentence) # stem the text
+    df_temp = basic_clean(df_temp) # remove duplicates and punctuation
     mask = df_temp['text'].str.len() > 15 # more than 15 characters
     df_temp = df_temp.loc[mask]
+
+    # concatenate this dataframe to the global result
     df = pd.concat([df, df_temp], axis=0)
 
-print(df.head())
 df.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + 'processed-data.csv'), index=False) 
+
+
+
+# determine max_df and min_df values:
+
+# fit and transform text data
+X = vectorizer.fit_transform(df['text'])
+# get the count of each word
+word_count = X.toarray().sum(axis=0)
+vocab = vectorizer.get_feature_names_out()
+# store word counts in dictionary
+word_count_dict = dict(zip(vocab, word_count))
+
+# sort dictionary descending
+sorted_word_count = sorted(word_count_dict.items(), key=lambda x: x[1], reverse=True)
+top_n = 10
+for word, count in sorted_word_count[:top_n]:
+    print(f"{word}: {count}")
+
+# sort dictionary ascending
+sorted_word_count = sorted(word_count_dict.items(), key=lambda x: x[1])
+top_n = 10 
+for word, count in sorted_word_count[:top_n]:
+    print(f"{word}: {count}")
+
+
+X = vectorizer.fit_transform(df['text'])
+# Get feature names (vocabulary) and transformed data
+feature_names = vectorizer.get_feature_names_out()
+X_transformed = X.toarray()
+# Create a DataFrame for the vectorized data
+vectorized_df = pd.DataFrame(X_transformed, columns=feature_names)
+vectorized_df.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + 'processed-data-with-vectorizer.csv'), index=False) 
