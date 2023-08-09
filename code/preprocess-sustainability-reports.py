@@ -1,25 +1,23 @@
+import os
+import numpy as np
+import pandas as pd
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer
-import os
-from pathlib import Path
-import numpy as np
-import pandas as pd
-import modin.pandas as md
 import file_operations as fop
 import re
+import statistics # for vectorizer - delete later
 
 # constants
 ROOT_DIR        = "./reports" # raw data
-INDIR           = "processed_reports/"
-RAW_DATA_PREFIX = "processed_reports/" # save the processed data
+PROCESSED_DIR = "processed_reports/" 
 ENERGY_TICKERS = ["XOM", "CVX", "COP", "SLB", "EOG", "MPC", "PXD", "PSX", "VLO", "OXY", "WMB", "HES", "LNG", "KMI", "DVN"]
 CLEAN_ENERGY_TICKERS = ["FSLR", "ENPH", "SEDG", "ED", "PLUG", "ORA", "SHLS", "RUN", "ARRY", "AGR", "NOVA", "CWEN", "GPRE", "SPWR", "FCEL"]
 
 # output relative paths
-CORPUS_FILEPATH_PREFIX = "corpus/"
-GENSIM_CORPUS_FILEPATH = "corpus.obj"
-COUNTVECTOR_FILEPATH = "countvec.obj"
+#CORPUS_FILEPATH_PREFIX = "corpus/"
+#GENSIM_CORPUS_FILEPATH = "corpus.obj"
+#COUNTVECTOR_FILEPATH = "countvec.obj"
 
 def remove_extra_chars(text): # digits, punctuation, special characters, keep spaces
     pattern = r'[^a-zA-Z\s]'
@@ -38,24 +36,8 @@ def stem_sentence(sentence):
     stemmed_tokens = [porter_stemmer.stem(token) for token in tokens]
     return ' '.join(stemmed_tokens)
 
-inDir = os.path.join(ROOT_DIR, INDIR)
-dl = sorted(fop.get_files_in_dir(ROOT_DIR)) # put files in chronological order by name
-
-stop_words  = (stopwords.words('english'))
-added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","ours","ourselves","use",
-               "you","your","yours","that","f","e","s","t","c","n","u","v","l","p","d","b","g","k","m","x","y","z",
-               "be","with","is","was","been","not","they","way","and","to","do","go","on","have","from",
-               "at","but","or","an","if","all","so","it","thing","put","well","take","see","","can't","can",
-               "got","cant","could","him","his","this","had","he","her","she","hers","their","they're","things",
-               "go","going","let","would","make","like","come","us"]
-stop_words= list(np.append(stop_words,added_words))
-
-# tokenizes data
-vectorizer = CountVectorizer(stop_words = stop_words,
-                            lowercase = True,
-                            ngram_range = (1, 2), # allow for bigrams
-                            max_df = 100000, # remove words with > 10,000 occurrences
-                            min_df = 1)# remove words with < 20 occurrencees
+inDir = os.path.join(ROOT_DIR, PROCESSED_DIR)
+dl = sorted(fop.get_files_in_dir(ROOT_DIR)) # sort files chronologically
 
 df = pd.DataFrame()
 column_names = ['company-type', 'company-ticker', 'year', 'part', 'text'] # add 'company-type', later
@@ -94,8 +76,24 @@ for i, f in enumerate(dl):
     # concatenate this dataframe to the global result
     df = pd.concat([df, df_temp], axis=0)
 
-df.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + 'processed-data.csv'), index=False) 
+df.to_csv(os.path.join(ROOT_DIR, PROCESSED_DIR + 'processed-data.csv'), index=False) 
 
+# assmeble stop words
+stop_words  = (stopwords.words('english'))
+added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","ours","ourselves","use",
+               "you","your","yours","that","f","e","s","t","c","n","u","v","l","p","d","b","g","k","m","x","y","z",
+               "be","with","is","was","been","not","they","way","and","to","do","go","on","have","from",
+               "at","but","or","an","if","all","so","it","thing","put","well","take","see","","can't","can",
+               "got","cant","could","him","his","this","had","he","her","she","hers","their","they're","things",
+               "go","going","let","would","make","like","come","us"]
+stop_words= list(np.append(stop_words,added_words))
+
+# tokenizes data
+vectorizer = CountVectorizer(stop_words = stop_words,
+                            lowercase = True,
+                            ngram_range = (1, 2), # allow for bigrams
+                            max_df = 1000, # remove words with > 10,000 occurrences
+                            min_df = 10)# remove words with < 20 occurrencees
 
 
 # determine max_df and min_df values:
@@ -112,15 +110,37 @@ word_count_dict = dict(zip(vocab, word_count))
 
 # sort dictionary descending
 sorted_word_count = sorted(word_count_dict.items(), key=lambda x: x[1], reverse=True)
-top_n = 20
+
+top_n = 30
 for word, count in sorted_word_count[:top_n]:
     print(f"{word}: {count}")
+print("total unique words: ", len(sorted_word_count))
+
+# Extract frequencies from the list
+frequencies = [frequency for word, frequency in sorted_word_count]
+print("total words: ", sum(frequencies))
+
+
+# Convert frequencies to numpy array
+frequencies_array = np.array(frequencies, dtype=np.int64)
+
+# Calculate statistics
+mode = statistics.mode(frequencies)
+median = np.median(frequencies_array)
+mean = np.mean(frequencies_array)
+std_dev = np.std(frequencies_array)
+
+# Print statistics
+print("Mode:", mode)
+print("Median:", median)
+print("Mean:", mean)
+print("Standard Deviation:", std_dev)
 
 # sort dictionary ascending
-sorted_word_count = sorted(word_count_dict.items(), key=lambda x: x[1])
-top_n = 10 
-for word, count in sorted_word_count[:top_n]:
-    print(f"{word}: {count}")
+#sorted_word_count = sorted(word_count_dict.items(), key=lambda x: x[1])
+#top_n = 10 
+#for word, count in sorted_word_count[:top_n]:
+    #print(f"{word}: {count}")
 
 
 X = vectorizer.fit_transform(df['text'])
@@ -129,4 +149,34 @@ feature_names = vectorizer.get_feature_names_out()
 X_transformed = X.toarray()
 # Create a DataFrame for the vectorized data
 vectorized_df = pd.DataFrame(X_transformed, columns=feature_names)
-vectorized_df.to_csv(os.path.join(ROOT_DIR, RAW_DATA_PREFIX + 'processed-data-with-vectorizer.csv'), index=False) 
+#vectorized_df.to_csv(os.path.join(ROOT_DIR, PROCESSED_DIR + 'processed-data-with-vectorizer.csv'), index=False) 
+
+
+
+'''
+# OUTLIER CALCULATION
+import numpy as np
+
+# Extract frequencies from the list
+frequencies = [frequency for _, frequency in sorted_word_count]
+
+# Calculate the mean and standard deviation
+mean = np.mean(frequencies)
+std_dev = np.std(frequencies)
+
+# Set the z-score threshold (e.g., 2 standard deviations)
+z_score_threshold = 2
+
+# Calculate the z-scores for each frequency
+z_scores = [(frequency - mean) / std_dev for frequency in frequencies]
+
+# Identify outliers based on z-scores
+outliers = [word for (word, frequency), z_score in zip(sorted_word_count, z_scores) if abs(z_score) > z_score_threshold]
+
+
+# Print the frequencies of outliers
+for word, frequency in sorted_word_count:
+    if word in outliers:
+        print(f"Outlier: {word}, Frequency: {frequency}")
+'''
+
