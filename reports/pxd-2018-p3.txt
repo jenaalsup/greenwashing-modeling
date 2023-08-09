@@ -1,0 +1,228 @@
+SUSTAINABILITY PROGRAMSResponsible OperationsPioneer’s Health, Safety and Environmental team leads our frontline efforts to comply with laws, regulations and policies, 
+identify opportunities to enhance safe operations, and seek continuous 
+improvement in both safety and 
+environmental stewardship.Safety and HealthWe are dedicated to protecting the health and safety of everyone involved 
+in and around Pioneer’s facilities and operating areas by enforcing high 
+standards, strict corporate policies, 
+and responsible and ethical procedures. Safety starts with solid governance and committed senior managers, and our 
+Pioneer Corporate Safety Committee sets the direction and vision for 
+programs in our operating areas. 
+The heart of Pioneer’s safety program lies within the field office Central Safety Committees and safety action teams, which are responsible for 
+evaluating safety observations, reporting and discussing safety concerns, reviewing accident investigations, assisting with field inspections, and developing and reviewing corporate standard operating procedures (SOPs). Pioneer conducts a thorough internal review before 
+contractors are added to the Approved Contractor List. This process, along with ongoing monitoring, is supplemented by evaluating contractor safety 
+performance via the ISNetworld 
+platform for subscribed contractors.
+SUSTAINABILITY PROGRAMS21* Bureau of Labor Statistics U.S. Oil & Gas incident rateSafety Performance and TrainingBy continuing to focus on creating an incident- and injury-free workplace, we reduced our 
+OSHA-recordable incidents in 2017. We continued to develop and implement our contractor HSE program companywide, specifically focused on familiarizing contractors with Pioneer’s HSE 
+expectations early in the contractor relationship. At Pioneer, contractors work with us, not for us. As such, we are developing a Contractor 
+Partnership Program to further strengthen our relationship with these critical partners.Our employee and contractor training programs cover accident prevention, protective equipment, safe operating practices, and chemical material precaution and workplace hazards. We follow OSHA standards and regulations, offering 
+new-hire training and regular courses for 
+employees and contractors.In 2017, our Training team provided more than 43,000 person-hours of HSE training to Pioneer employees and contractors and provided nearly 4,000 person-hours of training on SOPs in 
+operations and well services areas. Pioneer utilizes OSHA guidelines to track safety performance and calculate total recordable injury rate (TRIR), using the industry standard measurement of injuries per 200,000 person-hours worked. 
+Pioneer has an integrated services model, with employees assigned to exploration and production (E&P) operations roles, and to roles within our service functions – Pioneer Pumping Services, Pioneer Well Services, Pioneer Sands, Pioneer Drilling and Completions, and Pioneer Infrastructure Group. To benchmark ourselves against appropriate peer companies, we separate TRIR for E&P 
+employees from TRIR for services employees. Our TRIR in 2017 was 0.49 for E&P employees, 1.27 for service employees and 0.86 for the 
+company overall.SUSTAINABILITY PROGRAMS22Spill Prevention and Management Pioneer dedicates substantial resources to ensuring our operations are performed in a manner that protects the environment. We believe all incidents, including spills, are preventable, and we train employees to prevent them. We investigate all spills to determine cause and corrective actions.Pioneer designs, builds and executes with spill prevention in mind. We invest in containment equipment, perform regular inspections and work diligently to comply with spill preparedness and response regulations. Stewardship365: Ownership – Hydraulic Tank Retrofit Prevents SpillsPioneer Well Services trucks spend about 50 percent of their time on unpaved roads. The team learned the hard way that their trucks and unpredictable terrain didn’t mix when they experienced two recordable environmental spills related to drain valves being ripped off the bottom of hydraulic tanks on their large Well Services winch trucks. 
+Working with experts from the Well Services maintenance crew, the team took the initiative to retrofit 
+the tanks on their fleet of winch trucks. They moved the shut-off valve/return line from the bottom of the hydraulic tank to an area less susceptible to spill-causing damage, even adding a protective plate to help prevent road hazards from striking the valve in the future.
+Pioneer’s Stewardship365 initiative encourages all of us 
+to take the action we know is right through Principle 3: Ownership: Empower employees and contractors to 
+do the right thing. Regardless of how large or small the action is, when it comes to ownership and environmental protection, taking the initiative to do the right thing for both Pioneer and the environment can be significant. SUSTAINABILITY PROGRAMS23Emissions ManagementPioneer is committed to achieving compliance with federal and state requirements and going beyond compliance by developing proactive strategies to reduce emissions. Emissions management starts with an operator’s field development and planning strategy. By developing world-class facilities and infrastructure, and securing firm transportation commitments with our 1,000,000 in 10 development strategy in mind, Pioneer is in a much better place to understand our long-term facility needs and potential emission-management requirements. By working with our third-party gas transportation providers, we are also able to 
+provide insight into Pioneer’s expected transportation capacity requirements years in advance, allowing us to have a long-term view on facility design and construction requirements well in advance of putting these facilities on production. These are examples of how Pioneer is utilizing good planning as part of our commitment to low-cost operations, while maintaining strong environmental stewardship principles. Flaring and Vapor Recovery Pioneer minimizes the flaring of gas in all our 
+operations. However, flares are needed in our 
+facility operations for upset or emergency conditions 
+and in situations where capture is not possible. 
+Their operation allows for the safe diversion and combustion of gases, meeting our goal to minimize the release of uncombusted natural gas, including methane. Founding Signatory: 
+American Petroleum Institute (API) Environmental 
+Partnership 
+On December 5, 2017, API 
+announced The Environmental Partnership, a voluntary industry initiative designed to continuously improve the environmental 
+performance of participating 
+companies. As a founding signatory of this program, Pioneer and 42 other participants  have demonstrated that the oil and gas industry can voluntarily implement best practices without additional regulation as well as provide the industry 
+an opportunity to define and 
+develop best practices in 
+emissions management.Each Environmental Partnership participant has agreed to implement one or more Environmental 
+Performance Programs designed 
+to improve leak detection; monitor 
+the manual liquids unloading 
+process and close all wellhead vents to atmosphere; replace, remove or retrofit continuous or high-bleed pneumatic controllers; and submit an annual report documenting 
+participation in the program(s) 
+for the prior year. Pioneer incorporates these program elements into our operations, and we look forward to sharing more details about our Environmental Partnership accomplishments in future sustainability reports.Pioneer prefers capturing and routing our oil 
+and gas products to pipelines. This practice 
+is best represented by our strategy to install vapor recovery units (VRUs) at all horizontal well tank batteries and include them as part of the standard horizontal well tank battery design in our Permian Basin operations. For horizontal tank batteries handling high production volumes, Pioneer installs multiple VRUs to manage the high gas volumes. These units operate by using Pioneer-produced gas to power compressors that remove valuable vapors and gases (including methane) from the storage vessels and routing them to pipelines. Our vapor recovery strategy allows Pioneer to capture potential facility 
+emissions and recover these high-value gases 
+as part of our product offerings. Pioneer controls emissions from oil well and 
+gas well completions in all of our assets. This 
+is accomplished by constructing necessary 
+facility infrastructure and permanent production 
+equipment ahead of associated well completions. 
+
+Wherever possible, Pioneer captures and 
+routes flowback emissions directly to production facilities and pipelines, rather than flaring. 
+This emissions reduction flowback strategy is 
+one example of Pioneer prioritizing gas recovery, rather than flaring, in our operations.An additional benefit of putting oil and gas 
+products directly into pipelines is that it reduces the need to haul our product with tanker trucks, the loading of which can create an emission source through the displacement of tank vapors. When tanker truck loading is necessary, Pioneer flares to control the resulting emissions.Gas-Driven Pneumatic Controllers Pioneer promotes environmentally sound 
+operations practices by reducing air emissions associated with high-bleed, gas-driven pneumatic devices. Pneumatic devices powered by pressurized gas are a process control element in oil and gas facility engineering, and are components of 
+compressors, separators, pressure vessels and 
+piping. In 2017, Pioneer completed a two-year effort to replace, modify or retrofit all existing high-bleed, gas-driven pneumatic controllers throughout our operations. Additional methane emission reductions can be achieved by converting these pneumatic devices to operate on a compressed instrument air 
+system. An instrument air system replaces the pressurized gas source with compressed 
+atmospheric air, eliminating methane emissions and providing additional safety benefits. Our Permian, South Texas and Texas Panhandle 
+teams improved operational efficiency and 
+reduced pneumatic device greenhouse gas 
+emissions through projects that converted onsite gas-driven pneumatic controllers to instrument 
+air systems at more than 10 horizontal tank 
+batteries, compressor stations, pipelines, and 
+midstream facilities.
+
+Leak Detection and RepairIn 2011, Pioneer began implementing a leak 
+detection and repair (LDAR) program that our lease operators continue to use today as part of normal facility inspections. We utilize various techniques such as audio, visual, and olfactory 
+inspections; optical gas imaging cameras; and Remote Methane Leak Detectors™ (RMLDs) across all of Pioneer’s operations to monitor 
+facilities for fugitive emissions. Our companywide LDAR program complies with EPA New Source Performance Standards OOOOa requirements which enacted an LDAR program for new or modified upstream facilities and compressor stations.
+Pioneer employs a team of thermographers 
+who use optical gas imaging cameras and leak detectors to conduct surveys at our facilities, such as well sites, tank batteries, compressor 
+stations, pipelines, and midstream facilities. 
+Optical gas imaging cameras utilize infrared 
+sensors to locate emissions not identifiable through other inspection methods. Each 
+Pioneer thermographer receives biennial 
+optical gas imaging training. The three-day 
+certification training is designed to teach the proper safety practices, methods to set up and operate the imaging cameras, how to identify what gases can be found with the technology, and the different environmental conditions 
+that affect gas leak detection. 
+Remote Methane Leak Detectors™ are laser-based methane detectors that can quickly and efficiently 
+detect leaks up to 100 feet away. When the 
+infrared laser beam is transmitted from the 
+device, some of the laser light is reflected back 
+to an internal sensor, which can be used to deduce a methane concentration. Leak detector training is provided to inspectors in accordance with 
+manufacturer guidelines and regulatory requirements.Pioneer owns nine optical gas imaging cameras and two Remote Methane Leak Detectors™. 
+In 2017, our companywide LDAR program 
+performed more than 13,000 optical gas imaging; audio, visual and olfactory (AVO); and aerial surveys at Pioneer wellheads, tank batteries, and compressor stations, with an additional 130 miles of pipeline inspected. Of these surveys, 654 surveys were conducted as part of the OOOOa requirements. These surveys resulted in 542 found leaks and 542 repairs, which were handled within 11 days, on average. Facilities are currently prioritized for surveys based upon the potential for fugitive emissions 
+to occur, and annual optical gas imaging surveys are established as the baseline for our facilities. Some facilities have been identified as having a higher potential for emissions (e.g. larger tank batteries and compressor stations) and are 
+surveyed at a semi-annual or quarterly frequency. In 2017, through the 
+utilization of VRUs, we 
+captured 1.1 million 
+metric tons of greenhouse 
+gas emissions (CO2e). Pioneer completed a 
+two-year effort to replace, modify, of retrofit all 
+high-bleed, gas-driven 
+pneumatic controllers.SUSTAINABILITY PROGRAMS26Three Approaches to Methane Leak DetectionEmission Reduction through Innovation In addition to our company-wide LDAR program, Pioneer is testing two innovative approaches to 
+monitoring methane emissions in its operations: 
+1) aerial methane monitoring, which provides field-wide survey capabilities, and 2) continuous methane monitoring, which detects leaks at the facility level. The technologies are designed to supplement the current LDAR efforts by detecting methane leaks and directing our team of thermographers and maintenance employees to efficiently locate and address leaks. This approach supports our standard of operations excellence. 
+Aerial methane monitoring – Pioneer has initiated a pilot study to conduct aerial surveys to identify fugitive methane emissions on a field-wide basis. This innovative method equips a fixed-wing aircraft with a passive spectrometer, optical camera and GPS. The onboard spectrometer images fugitive methane concentrations by measuring reflected sunlight for energy absorption at methane-specific wavelengths. The methane data is then overlaid with simultaneously collected optical images to form a single, geo-referenced image of methane leaks.The pilot project covered more than 62 square 
+miles and 170 Pioneer tank batteries in two days. The aerial methane surveys were conducted in 
+coordination with simultaneous RMLD team 
+inspections at select facilities. This allowed our 
+researchers to compare and calibrate the aerial 
+findings with traditional RMLD measurements. 
+The success of this project led to plans for a 
+“full-field” survey within our Permian assets in 2018. SUSTAINABILITY PROGRAMS27Continuous Methane Monitoring 
+In 2017, Pioneer piloted continuous methane monitoring sensors at three Permian tank 
+batteries. In order to detect methane leaks quickly, these sensors are installed strategically within the facilities and continuously monitor for leaks. In the event of a leak detection, system alerts provide an immediate notification, so maintenance crews can promptly address the leak, minimizing fugitive emissions. Pioneer is also working to use the system autonomously to identify equipment failures remotely. In 2018, Pioneer plans to install the continuous methane monitoring systems at seven additional locations. Operational PracticesPioneer engineers and field personnel proactively analyzed and improved our approach to common industry practices in pipeline pigging, compressor maintenance, and storage tank cleaning. Historically, as part of procedures to safely perform each of these tasks, gases within these components were “blown down” (depressurized through the venting of compressor vessels to the atmosphere). Over the past several years, new and innovative 
+equipment configurations and procedures allow Pioneer to capture these previously released 
+gases and reroute them back into the gas value chain. During 2017, as part of our operations in the Texas Panhandle, spherical balls called “pigs” cleaned those lines. Every time a pig is launched or received, the pressurized gas line is opened and there is a small release of gas. To capture these emissions, Pioneer developed a process to drop the pressure before the line is opened and enlarge the launching and receiving barrels. This procedure minimizes emissions by reducing the frequency of line openings.With a similar approach, our Permian team has altered the regular preventative maintenance process on gas lift compressors. As part of this process, compressor pressure vessels must be depressurized. In order to capture the gases lost during this process, the pressure vessel gases are now rerouted to sales pipelines or the inlet suction on other operating compression units, rather than being released into the atmosphere. This creates a safer working environment, significantly reduces 
+uncontrolled air emissions and can result in 
+increased revenue. From time to time, oil and condensate storage tanks can accumulate a buildup of solid material on the bottom of some storage tanks. The past process to safely open and clean the interior of a storage tank required the transferring of liquid and gas contents, but all gases could not be captured. 
+
+Our Western Asset Team developed a storage tank cleaning method that does not require an atmospheric opening of the tank to perform this same task. Through a process of flushing water through modified systems, the tank bottom buildup is entrained in water, which is then discharged into a tanker truck. Since the process occurs within the storage tank fluid column, no gases are released. The effluent from this process is then transported away from the facility for proper 
+disposal. This method can now be applied to 
+other storage tanks with similar operational 
+settings and need for this type of maintenance. SUSTAINABILITY PROGRAMS28Understanding Emissions Modern industry technologies and facility 
+designs have dramatically outpaced the original efficiencies and design considerations within EPA emissions datasets and models. As the 
+oil and gas industry continues to improve its 
+engineering and emissions management 
+practices, new, more accurate data is needed 
+to drive our decision-making process. We actively participate in multi-operator 
+national studies, which require collaboration among peer operators, regulators, academia, 
+industry trade groups and environmental non-governmental organizations. For these 
+studies, Pioneer provides direct access to 
+production sites and equipment, and assists in the design of safe-sampling protocols. The participation of Pioneer and other producers contributes to the development of methods for safely measuring methane emissions directly at the source and facilitates scientific analysis 
+where little empirical data previously existed. We continue our partnership with Colorado State University to better understand compressor station 
+emissions in the gathering and boosting 
+segment of the industry. Findings from these ongoing studies will enhance our ability to further identify opportunities for emissions reductions through best practices and technological solutions.Greenhouse Gases, Emission and Methane IntensitiesPioneer discloses its EPA-reported emissions 
+in this report due to the specific reporting 
+assumptions, applicable source category 
+equipment, engineering calculations and emission factors set forth in the applicable regulations. With the significant changes to industry reporting required by the EPA in 2016, we have selected 2016 as our emissions base year. Pioneer emissions reporting follows EPA GHG Reporting Program requirements that prescribe the methodologies to quantify GHG emissions, including methane, for each emission source category. Due to the pace of our projected facility 
+construction and the manner in which the EPA requires companies to calculate and report 
+emissions, we anticipate an increase in emissions intensity over the next five years, but we expect intensities to drop steadily over the long term.METHANE INTENSITY(million metric tonnes CO2e/MBOE)EMISSION INTENSITY(million metric tonnes CO2e/MBOE)TOTAL EMISSIONS(million metric tonnes CO2e)20162016201622.322.776.142017201720176.293.4426.09SUSTAINABILITY PROGRAMS29Water Conservation and Protection
+Water SourcingSecuring long-term supplies of non-potable, reusable water is vital to the oil and gas industry. Pioneer seeks various water sourcing options and water conservation opportunities, endeavoring to align directly with our environmental stewardship goals of:  • significantly decreasing freshwater sourcing  • ensuring a consistent supply  • optimizing water reuse in economically viable ways  • reducing roadway transportation of water suppliesAs our industry drills longer lateral wells and increases the number of hydraulically fractured stages in each well, water use per well increases. However, more oil and gas is recovered from these wells, reducing overall “water intensity” – gallons of water per million British thermal units (MMBTU) of energy.The amount of water used for well completions varies by well length, completion design and geology 
+of the formations targeted by each well. In 2017, 
+Pioneer’s South Texas and Permian asset areas used, on average, 0.18 and 0.51 barrels of water, respectively, per barrel of oil equivalent estimated to be ultimately recovered from wells drilled. Using a water intensity measurement helps compare our water usage to that of other leading power sources. By this calculation, our South 
+Texas and Permian asset 
+areas in 2017 used, 
+on average, 1.50 
+and 3.39
+gallons of water 
+per MMBTU, 
+respectively. IOGCC Environmental Partnership Award 
+In 2017, the Interstate Oil & Gas Compact Commission (IOGCC) honored Pioneer with the 
+Commission’s Environmental 
+Partnership Award. The Texas Railroad Commission nominated Pioneer Water Management, whose mission is to sustainably reduce our freshwater usage and provide recycled water supplies for use in operations, for the award. 
+Our agreements with the cities 
+of Odessa and Midland earned this award, which recognizes 
+innovative projects. Pioneer 
+is purchasing non-potable 
+effluent water from Odessa, and construction of treatment facilities to enable a similar agreement with Midland is scheduled to start in 2018. These agreements benefit both Pioneer and the partner cities by enhancing critical city infrastructure while sustainably providing Pioneer with millions 
+of gallons of usable water for 
+our operations. 
+These projects reduce the 
+need for potable water in a drought-prone area, decrease water transport road traffic and compensate the cities for water that would otherwise go to waste – a newfound revenue stream.Our comprehensive approach to water 
+conservation includes utilizing effluent water, brackish water and recycled produced water through our dedicated water management subsidiary, Pioneer Water Management, LLC (PWM). Responsible for water sourcing, 
+transportation and sales to internal and 
+external customers, PWM is focused on reducing the company’s use of fresh water, mitigating the disposal of produced water through water 
+recycling efforts, reducing water acquisition and transportation costs, and minimizing water 
+trucking on public roadways.Fresh Water: Pioneer is committed to 
+innovative water stewardship. While there is no immediate, economic solution to eliminate the use of fresh water in our operations, we are piloting and evaluating various methods of water conservation, more efficient water transportation and more sustainable storage methods. 
+Reclaimed Wastewater: Pioneer has uniquely collaborated with the cities of Odessa and Midland through mutually beneficial, 
+public/private water-sourcing transactions. 
+Our award-winning solution of sourcing municipal 
+effluent water, which is otherwise being disposed of, saves millions of gallons of fresh water throughout the Permian Basin. 
+(See sidebar on p. 30.)
+By fully utilizing our Odessa supply, we have 
+reduced our freshwater usage by nearly 27 percent. Pioneer remains committed to sustainable water management in the Permian Basin, which is why we are focused on expanding our produced water reuse program and are committed to completing our Midland municipal water supply project that breaks ground in 2018. Brackish Water: The Santa Rosa Aquifer, a brackish water formation containing water too high in salinity for drinking or agricultural usage, lays thousands of feet above the Permian Basin’s oil shale plays. PWM geologists and engineers continue to evaluate the unique reservoir’s large brackish water supply through geologic mapping, logging analysis, well optimizations and other subsurface techniques used in both the water and oil and gas industries. Using these tools, PWM is able to economically drill high-producing brackish water wells to support our operations.Reused Produced Water: As part of the production of oil, condensate and gas, Pioneer generates what is referred to as “produced water.” Once water comes into contact with oil, condensate or gas in the production cycle, it is considered produced water. Produced water is generally a mixture of water, naturally occurring dissolved solids, and a small amount of products used in the oil and gas 
+production process. Historically, Pioneer, through its own operations or using a third party, has disposed of fluids, including produced water, from oil and gas 
+production operations. Today PWM is investigating economically viable solutions for reusing produced water, which both prevents the need to dispose and provides another significant alternative to freshwater use.Water ProtectionPioneer designs, builds, and maintains its wells to protect groundwater quality during and after wellbore construction, meeting regulators’ strict requirements. In 2017, we tested the surface casing integrity on 250 wells drilled, in accordance with industry standards and practices, and plan to test all future wells. 
+This highly regulated safety system – along with thousands of feet of rock between the hydrocarbon and freshwater zones – keeps oil and gas out of the fresh water, and fresh water out of the oil and gas. For more than 70 years, the industry has successfully drilled and produced wells using these drillingtechniques. As additional protection, Pioneer installs pressure gauges during completions to monitor and test the annular space between the inner and outer well casing. In 2017, 100 percent of Pioneer’s 
+completed wells were tested in this manner.
+FracFocus.orgPioneer has been an industry leader on chemical 
+use disclosures. To help address questions about 
+hydraulic fracturing, Pioneer joined industry peers and regulators to create the website 
+FracFocus.org, a public registry of reported chemicals used in hydraulic fracturing. 
+Disclosure of chemicals used in hydraulic
+fracturing is important. Pioneer actively 
+supports this national initiative and complies 
+with state regulations on reporting. As of 
+December 31, 2017, Pioneer disclosed on 
+FracFocus.org the chemicals used in more than 3,760 wells drilled. While the FracFocus registry is a comprehensive 
+disclosure of chemicals used in the completions 
+process, some commercial products have unique properties that are protected as proprietary
+information under trade secret provisions 
+under state laws in which the chemical is used. However, for more responsible product sourcing, Pioneer Pumping Services (PPS), our subsidiary completions company, has implemented a supplier chemical pre-qualification system that reviews information for each chemical PPS uses, including chemical details deemed by the supplier to be proprietary information. In addition to this level of scrutiny in the selection of chemicals used in the PPS completion process, PPS has adopted a 
+policy not to use diesel fuel as an additive in 
+hydraulic fracturing fluids.
+Native Seed Restores Impacted Land
+Pioneer actively works with the Caesar Kleberg Wildlife Research Institute of Texas A&M University
+Kingsville to restore impacted land with native seed mixtures, which are now commercially 
+available. Since 2011, production of native seed mixtures in South Texas has quadrupled. Now, Caesar Kleberg Wildlife Research Institute estimates Pioneer funding 
+has reseeded approximately 200,000 acres in South Texas with native vegetation. They estimate that making more foundation seed available through this project has decreased the unit price for seeds by almost 50 percent, from $160 per acre in 2012 to $82 per acre 
+by 2015.Pioneer plans to expand our 
+participation with the Caesar 
+Kleberg Wildlife Research 
+Institute to include the harvesting 
+of native seeds from Pioneer-
+owned surface properties in the Permian Basin. The Institute’s 
+specific development of native seed mixes designed to thrive in West Texas should result in greater success through increased viability, fewer management 
+requirements, higher drought 
+tolerance and more benefit to local ecosystems. SUSTAINABILITY PROGRAMS33Land ManagementReducing Our FootprintPioneer continues to innovate in the area of 
+multi-well pad drilling that reduces the overall area of surface disturbance. One key initiative to reduce our surface footprint is drilling multiple wellbores from a single location. This practice allows Pioneer to not only significantly reduce the area of impact by the pad construction, but to also minimize the roadways and easements, compared to those required to support 
+single-pad drilling. 
+
+Pioneer Pad As Pioneer’s operations grow in the Permian Basin, our newest, most sustainable well pad yet, Pioneer Pad, allows us to drill 24 wells in the same space we 
+formerly drilled three wells. Pioneer is the first company to successfully bring this concept 
+to life in the Permian Basin.By consolidating to fewer drilling locations, we reduce our overall impact to the environment, both directly and indirectly. Needing only 1/4 of an acre per well 
+translates to, in some cases, 
+more than 80 percent reduction in surface impacts.  The Pioneer Pad design aligns strongly to the “Thoughtful Planning” principle of our 
+Stewardship365 initiative by 
+considering the environment 
+in decision-making.“Pioneer Pad, along with other surface and subsurface development strategies, will be key to achieving our 1,000,000 in 10 goals,” says Bonnie Black, vice president, Permian Well Planning and 
+Permitting. “This approach allows us to maximize the resource potential beneath the surface, especially in places where surface space is limited.”Through this strategy, Pioneer 
+is efficiently developing our 
+underground resources and 
+significantly reducing our surface resources, all while delivering the same product. Pioneer is actively planning today’s wells with 
+tomorrow in mind.

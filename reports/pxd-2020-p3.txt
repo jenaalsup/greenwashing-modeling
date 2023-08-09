@@ -1,0 +1,244 @@
+Climate Change and Air EmissionsClimate Change Position Climate change is an important priority for Pioneer 
+and our stakeholders. Our strategy is to manage our 
+environmental footprint proactively and limit emissions of methane and other greenhouse gases (GHG), while also limiting use of freshwater in our operations. 
+
+We are committed to working with the industry and all stakeholders to address our impacts to the environment while ensuring the sustainable supply of, abundant, 
+affordable, energy. Our approach to climate change 
+is consistent with our RESPECT values.Greenhouse Gases and Other 
+Air EmissionsPioneer designs modern infrastructure and facilities to provide better, more efficient emissions control. Pioneer achieves success in our production and capital efficiency goals, while also improving air emission performance. 
+Carbon dioxide (CO2), methane (CH4), and nitrous 
+oxide (N2O) are the primary components of GHG emissions, reported in terms of carbon dioxide 
+equivalent (CO2e). In addition to GHG, combustion and venting are sources of other emission constituents; volatile organic compounds (VOCs), nitrogen oxide (NOx), sulfur dioxide (SOx) air emissions and particulate matter (PM) are also considered in the management of emissions in our upstream oil and gas operations.CLIMATE CHANGE AND AIR EMISSIONS17Emissions Targets Pioneer has established four GHG emissions-
+related targets aligned with the TCFD’s criteria for target setting. We have committed to the following long-term targets for our operated assets, from a full-year 2019 emissions baseline to:   • Reduce our GHG emissions intensity 
+     25% by 2030  • Reduce our methane emissions intensity 
+     40% by 2030  • Limit our annual production flaring intensity 
+     to less than 1% of our natural gas produced
+     (while striving to bring Parsley assets to this 
+     level by year-end 2022)  • Zero routine flaring by 2030, with an aspiration    
+     to reach this goal by 2025These targets will drive improvement in our 
+management of emissions and climate-related 
+risk exposure, reduction of regulatory and policy risk, responsible sourcing of oil and gas, and 
+innovation in our operations. We are confident 
+in achieving these targets with support from:  • Producing oil and gas into modern and 
+     controlled facilities  • Prioritizing vapor recovery in our operations  • Requiring natural gas sales connections prior      to well production to prevent flaring  • Working with primary gas processors to 
+    minimize flaring due to operational upsets     • Utilizing advanced emissions monitoring 
+    technologies to detect leaks  • Actively plugging and reclaiming uneconomic 
+    production wells  • Managing operational performance progress  
+    towards emissions-related targets Pioneer will report our performance progress against these targets annually on a calendar-year basis, consistent with our reporting principles. GHG emissions intensity performance will be based on Scope 1 and 2 GHG emissions divided by gross oil and gas production (tonnes 
+CO2e/MBOE). Methane emissions intensity performance will be based on methane emissions in terms of CO2 equivalence divided by gross oil and gas production (tonnes CO2e/MBOE). Flaring intensity performance will be based on natural gas volumes flared during production operations, divided 
+by gross natural gas production (Mscf/Mscf). Zero routine flaring will be assessed per the World Bank Zero Routine Flaring by 2030 Initiative. These targets are based on our operating footprint, and we expect to reassess these targets from time to time as changes to our asset base and operations warrant. 
+
+Greenhouse Gas Emissions and IntensitiesAs a U.S. onshore company, the entirety of 
+Pioneer’s emissions falls within the regulatory 
+jurisdiction of the EPA. Although the EPA GHG Reporting Program is comprehensive for the oil and gas industry, the reporting of certain emissions may not be required. More than 80 percent of our 
+direct (Scope 1) emissions are annually reported 
+to the U.S. EPA GHG Reporting Program. The program prescribes methodologies, engineering calculations and emission factors outlined in the 
+applicable regulations to quantify GHG emissions for each emission source category, including methane. In this year’s report, for the first time, we provide data on non-reportable emissions, including 
+indirect (Scope 2) emissions. The development of our extended inventory was based on both the U.S. EPA GHG Reporting Program requirements, and the IPIECA/American Petroleum Association (API)/International Association of Oil and Gas 
+Producers “Petroleum Industry Guidelines for 
+Reporting Greenhouse Gas Emissions.” 
+
+As our reporting methodologies have changed, Pioneer will now use 2019 as our emissions 
+baseline year going forward. Lack of standardization in emissions calculation methodologies can lead 
+to variability in emissions inventories reported by 
+oil and gas operators. While we now present an 
+extended inventory that is more representative 
+of our actual emissions of 2.27 million metrics 
+tonnes CO2e, for comparability purposes, we 
+will continue to provide details regarding 
+our emissions as reported to the EPA in our 
+Sustainability Performance Data Table.CLIMATE CHANGE AND AIR EMISSIONS19Climate-Related Policy Risks We strive to mitigate regulatory and policy risks with these aggressive emission intensity targets, 
+industry-leading flaring commitments and the emission reduction actions described in the following section. We actively assess climate change-related pledges made by U.S. federal and state candidates for office and the increased 
+number of formal climate-related policy proposals from both parties at the state and federal levels. Pioneer Government Relations, Environmental 
+and Sustainable Development, and Legal and 
+Regulatory teams coordinate to educate state 
+and federal regulators and policy makers on our business and the steps we are taking to minimize our climate impact. We also partner with trade associations, think-tanks, academia and other stakeholders to engage in the public-policy 
+dialogue regarding climate change.
+Onshore in Texas, Pioneer’s operational footprint – on private lands – reduces the company’s 
+exposure to federal and international political risks. Nevertheless, we remain committed to leading when it comes to climate and environmental stewardship issues. We have supported the federal regulation of methane emissions, and we have 
+encouraged the Texas Railroad Commission (TRRC) to scrutinize natural gas flaring in the Permian Basin. 
+In this regard, the company continues to support and advocate for reasonable industry-wide 
+regulation of methane emissions and flaring. 
+In comments submitted to the U.S. EPA in 2019, Pioneer opposed methane regulation rule 
+rollbacks as those rules provided producers with operational certainty and predictability. We also worked with industry peers, academic and non-government organizations, and the TRRC 
+to improve practices and regulation in Texas 
+pertaining to the flaring of natural gas. Ideally, regulations would incentivize early action by 
+operators to reduce emissions. These are all examples of how Pioneer regularly engages with policymakers, industry peers, trade associations, non-governmental organizations (NGO), and 
+other key stakeholders to develop practical 
+solutions to reduce GHG emissions and address climate-related risks.
+Natural Gas Benefits for Reducing Global Greenhouse Gas EmissionsWhile our future growth strategy depends mainly 
+on low-cost oil production in the Permian Basin, Pioneer is also a sizable producer of associated 
+natural gas. In 2019, Pioneer averaged 365 million cubic feet per day in natural gas production, 
+making our company one of the top 40 natural gas producers in the U.S., according to data compiled by the Natural Gas Supply Association. A large portion of our natural gas is transported by pipeline 
+westward to markets in Arizona and California, 
+and a portion is used for generating electrical 
+power. Pioneer natural gas is also shipped to 
+points in Texas and Mexico for electrical power plant, residential or commercial use, and 
+petrochemical manufacturing.Several studies have concluded that natural 
+gas-fueled power plants emit half as much GHG when compared with coal-fired power plants. 
+The annual Inventory of U.S. GHG Emissions 
+and Sinks, compiled by the U.S. EPA, shows that 
+a reliable supply of natural gas has lowered the 
+national emissions and carbon intensity of the 
+electric power sector.
+Pioneer recognizes the benefits of using natural gas to displace coal can be impacted by fugitive methane emissions along the natural gas supply chain. Research studies conducted by the EPA, 
+academia, NGOs, and the oil and gas industry 
+estimate that pre-plant natural gas leakage rates vary widely, from roughly 1.0 percent to 2.6 
+percent. As an early adopter of emission reduction actions in our operations, Pioneer is well positioned to continue to supply responsibly sourced natural gas through the energy transition.Emission Reduction ActionsPioneer goes beyond compliance by developing proactive strategies to achieve our emission targets through management and Board oversight, 
+operational best practices, strategic planning, 
+research and industry partnership, which are 
+summarized in detail in the table on the next page. We have found great success in cross-functional alignment across the organization from our Board and Management Committee to support teams in the office and field. Collaboration allows us to leverage the varied skillsets of our teams 
+to identify and create innovative practices to 
+mitigate emissions and emission-related risks. 
+This alignment is reinforced through incentive compensation policies established by the Board. CLIMATE CHANGE AND AIR EMISSIONS21Summary: Emission Reduction Actions Supporting our TargetsCLIMATE CHANGE AND AIR EMISSIONS22Emission Mitigation Best Practices Reducing GHG and other air emissions and 
+increasing salable product capture are key 
+considerations in how Pioneer drills and completes 
+our wells, as well as designs, builds and operates our facilities.
+
+Drilling and Completions Pioneer controls emissions during oil and gas 
+well completions by constructing necessary
+infrastructure and permanent production 
+equipment ahead of associated well completions. Wherever possible, Pioneer captures and routes flowback emissions directly to production facilities and pipelines rather than flaring.
+Our drilling and completion operations continue 
+to become more efficient (as shown in the 
+example below) which drives significant reductions in air emissions. Pioneer embraces technology advancements as key to improving the competitive advantage of oil and gas to be a more reliable, cost effective and efficient energy source for the world. Pioneer is an industry leader in technology advancements, focusing on improving drilling and completion techniques and operational efficiencies. We invest annually in drilling technology groupsand participate in industry consortia. We also perform various digital field equipment enhancements to improve employee safety, reduce capital and operating costs, improve field data capture, and reduce Pioneer’s overall climate footprint. 
+
+Since 2017, our drilling team continued the trend 
+in reducing the number of days to drill a well from 28 to 20 on average. In some cases, wells have been drilled in significantly less time. One example of an efficiency improvement with impact is identifying and deploying standard equipment packages tailored 
+to maximize operational efficiencies to reduce 
+location carbon footprint. We are maximizing 
+drilling time and lowering static time. Similarly, 
+our completion operations continue to gain 
+efficiencies and have reduced the number of 
+days to complete a well from 8 days to 6 days. 
+By drilling and completing wells with fewer drilling rigs and pressure pumping fleets, we produce 
+lower emissions per year for the same number 
+of wells drilled.
+Pioneer continuous improvement processes have led directly to emission reductions over the past several years. We have increased the efficiency of drilling operations and reduced completions’ pressure pumping engine idle times by 80 percent since 2015, significantly reducing our diesel fuel consumption. Within the past four years, drilling and completion operations diesel fuel consumption per well by has fallen by more than 30 percent, reducing each well’s CO2 footprint by over 600 metric tonnes. Presently, we are on pace to 
+continue this trend of improvement in 2020. 
+Additionally, the duration of circulating time (the phase of completions operations during which 
+the well has the most potential to flare) has been reduced by 62 percent, leading to a dramatic 
+reduction in gas flared during completion 
+operations. Altogether, these improvements demonstrate how cost-efficient operations 
+and sustainable business practices result in 
+real value and reduced emissions.
+Facility Construction & Operations The first step in reducing emissions is constructing and securing pipeline and processing capacity for our oil and natural gas production. We have 
+partnered with third-party gathering, processing 
+and pipeline operators to mitigate impacts from flow constraints by securing firm gathering commitments. Pioneer meets regularly with our gathering and 
+processing partners to review production forecasts, system pressure models and project schedules; sharing in the responsibility to meet production demands and emission reductions. 
+CLIMATE CHANGE AND AIR EMISSIONS23CLIMATE CHANGE AND AIR EMISSIONS24Pioneer is also a Permian Basin leader in long-term commitments to firm transportation capacity for oil, natural gas and natural gas liquids to markets outside the Permian Basin. Our continued direct support of large-scale pipeline projects has 
+increased storage and flow capacities allowing 
+us to flow our production throughout the U.S., Mexico and to global markets.
+Prioritizing Vapor RecoveryPioneer prioritizes vapor recovery unit (VRU) 
+technologies that allow us to capture gas, rather than flare or vent emissions. Our engineering design process considers VRU capacities when it comes to facility design. VRUs are compressor units that remove vapors and gases, including methane and other uncombusted air emissions, from storage 
+vessels, then route the gases into sales pipelines. Since 2012, we have installed VRUs at horizontal well tank batteries as part of the standard facility design and primary emission control in our 
+operations. VRUs are also part of our vertical 
+well facility designs as needed, based on facility production. In 2019, horizontal well tank batteries accounted for 90 percent of our oil and gas 
+production, therefore having the most significant impact on our facility emissions. As a result, in 2019, Pioneer VRU’s captured 9.3 billion cubic feet of gas (the equivalent of 5.6 million metric tonnes of CO2e emissions). For perspective, Pioneer’s total 2019 emissions footprint was 2.27 million metric tonnes. This practice, along with constructing 
+adequate gas take-away infrastructure prior to 
+producing wells and continuing our industry-
+leading LDAR activities, puts Pioneer in a 
+position to capture and sell a maximum volume 
+of gas while reducing our emissions footprint.
+
+ 
+Minimizing FlaringPioneer strives to minimize the flaring of gas in all our operations. However, flares are necessary for 
+upset or emergency conditions and in situations where gas capture is not possible. In upset conditions, 
+operations staff work with our engineering team to verify production levels are maintained, to stay below the flare capacities, and to ensure the 
+combustion efficiencies are not compromised. 
+Pioneer senior management is actively engaged 
+in circumstances where the company is flaring gas 
+to assure that the flaring is kept to a minimum and that Pioneer meets its flaring intensity commitments. 
+Pioneer has committed to this industry-leading threshold through cross-departmental analysis, 
+pilot testing, innovation, thoughtful development 
+of our operations and thorough analysis to understand the root causes of conditions that lead to flaring. Proper data assurance helps determine key drivers and accurate quantification of flared gas volumes. Collaboration and joint use of best practices will allow the industry to drive positive improvements in venting and flaring reductions. Pioneer remains committed to working with other operators, regulators, academic institutions and NGOs to manage 
+emissions in the Permian.5.6 million 
+tonnes CO2e captured by Pioneer VRUs in 2019CLIMATE CHANGE AND AIR EMISSIONS25Leading by ExampleDuring our 2019 fourth quarter earnings call, Pioneer 
+CEO Scott Sheffield introduced the importance of setting 
+a percentage target on flaring. 
+
+Sheffield encouraged producers to act and be part of the solution to what he dubbed the “black eye” of the Permian Basin. When speaking about Permian operator production flaring, Sheffield stated that oil and gas CEOs should set a target to flare two percent or less of their total natural gas production to solve this problem.
+After Sheffield initiated this important dialogue on flaring, Permian producers focused on flaring reduction and committed to better reporting, both in Texas and New Mexico. Producers are sharing best practices and discussing emissions targets.
+Pioneer mitigates routine flaring by 
+requiring that wells are connected 
+to gas takeaway infrastructure before 
+they are placed on production.
+Pioneer continues to lead by 
+example in setting our flaring 
+intensity threshold of less 
+than one percent.Top-Tier Performance in the PermianPioneer recognizes rapid oil and gas development has resulted in additional flaring of natural gas in the Permian Basin. In 2019, Pioneer was the sixth-largest natural gas producer in the Permian Basin. The average 2019 flaring intensity for 
+Permian producers was 3.7 percent of natural gas produced; Pioneer was able to limit production flaring to 0.73 percent, which is in line with Rystad energy research and analysis reporting on Permian flare percentages. We are also seeing strong 
+performance in 2020, as shown in the figure above.Flare Design and MaintenanceWe use dual tip flares sized for high-pressure production flow in an emergency and low-pressure facility emission controls to ensure that, in both scenarios, combustion efficiencies are met. The flare design is scaled to meet full production 
+capacities. Our new flare designs also include 
+automatic back-pressure valves to activate the flare (instead of pressure-relief venting) due to third-party pipeline high-pressure issues. 
+Pioneer remotely monitors flaring through our supervisory control and data acquisition (SCADA) system and utilizes alarms that are directed to a technician for quick response. Alarms are triggered by deviations in normal operating conditions. 
+Our remote monitoring and tracking program led to a 102 percent increase in notification alarms, which resulted in a 55 percent reduction in upset-condition emission releases from 2018 to 2019. A daily log is distributed to key Pioneer operations stakeholders informing them of the issues and the selected response procedures. Pioneer monthly inspections and preventative maintenance programs also 
+ensure proper operation of flaring systems.Minimizing Facility Leaks
+Through Innovation
+Methane Leak Detection and RepairWe utilize various techniques such as audio, visual, and olfactory (AVO) inspections, optical gas 
+imaging (OGI) cameras, portable gas detectors, 
+and aerial methane monitoring across Pioneer 
+operations to monitor facilities for fugitive emissions. Our LDAR program complies with EPA New Source Performance Standards OOOOa (OOOOa) 
+and TCEQ Standard Permit requirements for 
+upstream facilities and compressor stations. 
+Pioneer intends to continue this program despite the effort of the EPA to roll back these standards. CLIMATE CHANGE AND AIR EMISSIONS27Operational Excellence, Facilitate Facility Upgrades, and Maintenance ProgramsCLIMATE CHANGE AND AIR EMISSIONS28Pioneer employs a team of thermographers 
+who use OGI cameras to conduct surveys at our facilities, such as well sites, tank batteries, compressor stations, pipelines and midstream locations. OGI cameras utilize infrared sensors to locate emissions not identifiable through other inspection methods. Pioneer owns nine OGI 
+cameras. Each Pioneer thermographer receives biennial OGI training to learn proper safety 
+practices, methods to set up and operate the 
+imaging cameras, how to identify what gases 
+can be found with the technology, and the 
+different environmental conditions that affect 
+gas leak detection.
+In 2019, we performed more than 10,500 
+surveys using OGI, AVO and aerial technologies at Pioneer wellheads, tank batteries and compressor stations. Of these surveys, approximately 950 were conducted as part of the OOOOa
+requirements. These surveys resulted in a little over 1,000 found leaks. Pioneer promptly repaired these leaks within the regulatory timeframe. Facilities are surveyed annually as the baseline frequency. Facilities identified as having a higher potential for emissions (e.g., larger tank batteries) are surveyed semi-annually.
+In addition to our regulatory OOOOa LDAR program, the Pioneer voluntary LDAR program utilizes advanced approaches to monitoring methane emissions. While our voluntary LDAR program targets methane detection, it also allows us to minimize emissions of other components of natural gas such as VOCs and H2S. The program evaluates novel technologies to mitigate emissions in our operations.
+These technologies supplement the current LDAR program by detecting methane leaks and allowing our thermographers and maintenance employees 
+to efficiently locate and mitigate the emissions.
+
+
+Aerial Methane MonitoringStarting in 2017, Pioneer began conducting 
+aerial-based surveys to identify fugitive methane emissions on a field-wide basis to find and fix 
+emissions faster. This method equips a fixed-wing 
+aircraft with onboard methane sensors, optical 
+cameras and a global positioning system (GPS). 
+The methane concentration data is overlaid with simultaneously collected optical images to form a single, geo-referenced image of methane leaks. 
+This methodology identifies and quantifies areas 
+of high probability for elevated methane sources and is best used for identifying leaks that require prompt attention. Since 2018, Pioneer has conducted annual full-field methane leak surveys of our entire operational area and assets. The results for 2019 showed elevated methane 
+at 135 of the surveyed sites. All the identified 
+leaks were promptly repaired. This method has 
+not only proven extremely efficient in directing our voluntary LDAR program but is also reducing employee work and driving hours. The time saved allows our employees to spend less time finding leaks and more time preventing leaks.
+In 2020, Pioneer piloted another aerial-based 
+technology with greater sensitivity for detecting methane across 25 percent of our field sites. The 
+technology uses modified light detection and ranging to detect methane. Preliminary results from the pilot are helping Pioneer understand how this new technology can be deployed and how we can efficiently process and operationalize the data. As an integral part of 
+our LDAR program, we continue to evaluate novel technologies and methodologies to guide better 
+operational decisions of our methane and GHG intensity performance and targets. 
+Collaborative Research and PartnershipsModern industry technologies and facility 
+designs have dramatically outpaced the original efficiencies and design considerations within EPA emissions datasets and models. As the oil and gas industry improves its engineering, emissions management and emission reduction practices, new, more accurate data is needed to drive our decision-making process. We actively participate in multi-stakeholder national and regional studies, which require collaboration among peer oil and gas operators, regulators, academia, industry trade groups, and environmental organizations. For these studies, Pioneer provides direct access to production sites and equipment and assists in the design of safe-sampling protocols. Pioneer’s participation contributes to the development of methods for safely measuring methane emissions directly at the source and facilitates scientific analysis where little empirical data previously existed. Continuous methane monitoringIn addition to monitoring our operations aerially over a large area, Pioneer is also piloting technologies 
+in partnership with several continuous emission-
+monitoring technology companies. In 2020, 
+Pioneer is evaluating continuous monitoring 
+technologies at our large, complex horizontal 
+facilities. Every oil and gas site is different. Pilot 
+trials help identify the proper technologies for every unique location: for example, each location may differ in the number of sensors required, 
+sensor placement, and data communication 
+and integration. Aerial Methane Monitoring of 
+9,574 total sitesSUSTAINABILITY PROGRAMSCLIMATE CHANGE AND AIR EMISSIONS29CLIMATE CHANGE AND AIR EMISSIONS30“Project AstraPioneer is participating in a groundbreaking partnership to design and test a first-of-its-kind network of sensors that will monitor emissions across a region that produces oil and gas, which could potentially streamline the way methane leaks are found. Led by researchers at The University of Texas at Austin, Project Astra is a collaboration between Environmental Defense Fund, ExxonMobil, Gas Technology Institute (GTI) and Pioneer. It is focused on the Permian Basin – and specifically on the Midland Basin. Project Astra will establish a sensor network that will leverage methane-sensing advances, technologies, data sharing and data analytics to provide near-continuous monitoring. Goals for the sensor network are to allow producers to find and fix significant methane releases more often and more cost-efficiently than current 
+monitoring technologies. The team at UT Austin will create a simulated atmosphere, which will model concentrations 
+of methane and other natural gas components expected in the atmosphere under normal 
+conditions, as well as when unintended emissions are present. The simulation will help researchers identify the types and locations of methane 
+sensors that will be most effective.The collaboration brings technical knowledge and expertise together, with the goal of promoting design innovation. Pioneer will participate in the technical design of the various aspects of the study. In addition, we will provide access to 
+production facilities and relevant operational 
+data specific to the study.The findings of the project, which will be published in peer-reviewed journals and made publicly 
+available, could help guide how companies, states, and the federal government measure, monitor, 
+and manage methane emissions in the future.To learn more about this work, visit 
+http://dept.ceer.utexas.edu/ceer/astra.Collaboratory to Advance Methane SciencePioneer is a founding member of the Collaboratory to Advance Methane Science (CAMS). CAMS 
+is a consortium of oil and gas operators funding 
+scientific studies to address methane emissions, from production to end use. The first research project funded through CAMS was awarded to 
+the University of Texas at Austin to study spatial and temporal methane emissions profiles across various oil and gas basins. The Methane Emission Evaluation Tool (MEET) model has been developed and is being reviewed for completeness and 
+accuracy. Efforts are underway to make the model available publicly so that anyone could utilize 
+the model to understand spatial and temporal emissions profiles in any given basin. The Environmental PartnershipAs a founding signatory of this program, Pioneer has reported annually to the API The Environmental Partnership (TEP) since 2018. After two successful years, Pioneer and 88 other participants have demonstrated the oil and gas industry can voluntarily define and implement best practices without 
+additional regulation.
+Each TEP participant has agreed to participate in voluntary programs to reduce emissions: conduct an LDAR program; replace, remove or retrofit continuous/high-bleed pneumatic controllers; and monitor emissions from manual liquids-unloading operations. In 2017, Pioneer was able to achieve these goals ahead of the TEP schedule. We have submitted our second annual report to API. Participating in Project Astra offers significant opportunities to advance technology in detecting and reducing methane emissions and help our industry 
+address this critical issue.”– Mark Berg, Executive Vice President, 
+   Corporate Operations

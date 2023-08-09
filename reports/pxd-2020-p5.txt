@@ -1,0 +1,152 @@
+Implementation of TCFDOverview
+The Task Force on Climate-Related Financial Disclosures (TCFD) provides a framework that allows a company’s response to the 
+potential risks and rewards of a transition 
+to a lower-carbon economy to be evaluated 
+on a level playing field. The expectation 
+for climate-related disclosure from investors and others is important, and Pioneer 
+understands a company that communicates 
+its climate resiliency to investors will have a competitive advantage. Following the TCFD recommendations, 
+Pioneer seeks to improve its disclosures in 
+this report through: 1) identifying climate-
+related risks and opportunities, 2) committing 
+to integrate these climate-related risk 
+assessments into our enterprise risk 
+management process and evaluating 
+financial impacts of those risks, and 3) sharing our programs and actions that mitigate 
+climate change-related risks and maximize climate change-related opportunities. IMPLEMENTATION OF TCFD53Governance: The organization’s oversight of climate-related risks and opportunities;  Strategy: The actual and potential impacts of climate-related 
+risks and opportunities on the organization’s businesses, strategy 
+and financial planning where such information is material; Risk Management: The processes used by the organization 
+to identify, assess and manage climate-related risks;  Metrics and Targets: The metrics and targets used to assess and manage relevant climate-
+related risks and opportunities. (SASB) Pioneer is committed to improve its climate 
+disclosure and integrate additional financial impact assessments and updated climate-related risk scenarios. Pioneer is advancing its strategic planning and enterprise risk management 
+processes to evaluate the short-, medium- 
+and long-term impact of climate-related risks 
+on the company.  Governance of Climate-Related Issues Pioneer has updated five Board Committee 
+Charters and provided additional disclosure of 
+the Board’s commitment to sustainability in our 2020 Proxy Statement to reflect their role in 
+overseeing sustainability and climate-related issues. Additional disclosure on the role of 
+management in assessing and managing 
+climate-related issues are provided in the 
+Governance section [LINK] of this report.  Climate-Related Strategy Currently, climate-related impacts on the 
+U.S. onshore oil and gas industry are not clear, based on uncertain market and policy reactions. This uncertainty has increased with the impact 
+of COVID-19 on the global economy and the demand for oil and gas. Given these uncertainties, the Board and Management Committee consider 
+a wide array of future scenarios that could lead 
+to impacts on our business, including operating costs, capital expenditures, regulatory and 
+environmental developments, and commodity price and demand changes. When evaluating possible future business scenarios, Pioneer considers several published energy 
+forecasts and analyses by leading official agencies such as, but not limited to:   • The U.S. Energy Information Administration’s 
+     (EIA) International Energy Outlook   • The Organization of Petroleum Exporting   
+    Countries’ (OPEC) World Oil Outlook  • The International Energy Agency’s (IEA) 
+     World Energy Outlook Pioneer also engages private commodity market analysis firms to provide the company with industry and economic projections, which are utilized to test management’s assumptions of future business conditions. These tools are used to assess potential impacts on global fossil fuel demand and Pioneer’s long-term business prospects, including key aspects of climate-related risks and opportunities (e.g., transitional risks). Many of our information sources are re-evaluating their commodity price and demand forecasts in the wake of COVID-19. We plan to update our 2018 carbon-constrained scenario analysis in 
+2021, upon gaining greater clarity of global oil and gas demand reaction beyond the COVID-19 pandemic impacts. We believe Pioneer is in a particularly strong 
+position to weather the COVID-19 pandemic 
+due to the quality of the company’s assets and 
+its strong balance sheet and cost structure. 
+Pioneer is the largest acreage holder under lease in the eastern part of the Permian Basin, also known as the Midland Basin, with approximately 760,000 gross acres (680,000 net acres). 
+As the figure above illustrates, the Midland Basin is among the best-in-class with an estimated oil price breakeven cost of approximately $39 per barrel as of mid-2020. Pioneer expects to remain a leading low-cost operator through thoughtful strategy and planning consistent with TCFD principles. The profitability of the Midland Basin is particularly evident when compared with other onshore U.S. liquid-rich basins. A $33/BBL breakeven cost is attributed to Pioneer by Enverus in the figure on p. 57, indicating the company is in a strong position to produce oil and gas economically and help meet long-term global demand for oil.  IMPLEMENTATION OF TCFD55Note: Data from RS Energy; Reflects horizontal wells completed in 2019.IMPLEMENTATION OF TCFD56Climate-Related Risks and 
+Opportunities The TCFD identifies several categories of 
+climate-related risks and opportunities. These include the potential financial impacts of climate change to assist investors and companies as they evaluate longer-term strategies and the most 
+efficient allocation of capital. Transitional and Physical Risks  Transitional risks arise from a global market 
+demand for low-carbon energy, including (i) policy and legal risks from regulation, legislation and litigation, (ii) technology risks from the move toward low-carbon energy production, and (iii) reputational risks from consumer behavior 
+uncertainty, such as stigmatization of the sector. These risks have the potential to shift the supply and demand for fossil fuels, due to changes in consumer preferences. The company evaluates transitional risks on an ongoing basis and assesses such risks, as illustrated below. Pioneer’s risk 
+management practices and business principles reduce the risk of reputational damage and provide a differentiating long-term value creation prospect for our stakeholders. As we have operated in the Permian Basin for 
+decades, we have been able to identify and 
+effectively mitigate many physical risks. The 
+company also ensures limited business disruptions by securing key materials and supplies critical to our operations. For example, we mitigated diesel supply disruptions due to a hurricane or other acute event impacting refineries along the gulf coast of Texas by securing a long-term supply agreement to build a strategic reserve located in our area of operations. Pioneer supply agreements to secure local and reliable sand and water supply through long-term arrangements are also considered in its physical risk mitigation. In addition, we 
+mitigate physical risks in the ways detailed in the 2020 TCFD Content Index.IMPLEMENTATION OF TCFD57Climate-Related Transition RisksIMPLEMENTATION OF TCFD58Climate-Related Physical RisksClimate-Related Opportunities Climate-related opportunities arise through a company’s efforts to mitigate and adapt to climate change, including improving resource efficiency, securing lower emissions energy sources, and producing differentiated oil and gas products for emerging markets. Pioneer has identified the climate-related opportunities on p. 60.Climate-related opportunities include efficiencies 
+resulting in an increase in revenue, reduced operating and capital costs, and reduced insurance premiums. Responsibly Sourced Oil and Gas Currently, emerging markets for responsibly 
+extracted oil and gas are developing in the U.S. and Europe. These markets may offer premium pricing for natural gas and oil with verifiable 
+sustainability performance. Although Pioneer has not yet completed a premium pricing agreement, we hope, as a result of our commitment to continuous improvements to the environmental footprint across our operations, to have the opportunity to leverage performance towards premium pricing, wherever possible. Pioneer advocated to lift the U.S. oil export ban and has entered into transactions to diversify the company’s oil and gas sales to the Gulf Coast of Texas and international export markets. As global market trends shift due to climate-related goals and sustainability-driven agreements, Pioneer has an opportunity to serve foreign markets seeking responsibly sourced oil and gas. In addition, we maximize climate-related opportunities in the ways detailed in the following table.
+Risk Management  Pioneer has relied on its ERM process (as described in Enterprise Risk Management section) to identify, assess, and manage the company’s risk, including climate-related risks. We intend to enhance the 
+consideration of climate-related risks assessment within our ERM process to better align with the TCFD framework. Risk mitigation practices for each of the climate-related risks are detailed throughout this report and are indexed relative to the TCFD and other reporting standards within our Sustainability Content index.  
+
+Metrics & Targets  Pioneer has begun implementing the Sustainability Reporting Standards Boards (SASB) standard for the oil and gas exploration industry to supplement this report’s disclosures and targets. As described in other sections of this report, in 2020 Pioneer established detailed targets for our GHG emissions, methane emissions and flaring. In conjunction with establishing these targets, we have completed an effort to report an extended inventory of scope 1 and 2 GHG 
+emissions from our operations that goes beyond the U.S. EPA GHG Reporting Program requirements. 
+Pioneer is integrating climate- and sustainability-
+related performance metrics in our enterprise risk management process and compensation policies. For additional detail of our alignment to the SASB oil and gas exploration industry standard, refer to our SASB Sustainability Content Index [LINK]IMPLEMENTATION OF TCFD59Climate-Related OpportunitiesIMPLEMENTATION OF TCFD60HSE Management SystemOur HSE Management System (HSEMS) provides an organized approach for HSE activities while supporting Pioneer’s vision of a workplace that positively impacts our employees and communities. Our Health and Safety Management System and Environmental Management System, 
+developed in 2014, were originally independent of each other. In 2019, Pioneer integrated them into one system. The most notable improvements with an integrated HSEMS are:    • Improved structure under the Plan-Do-Check-Act (PDCA) continual improvement cycle   • Uniform HSE elements in Hazard Identification and Risk Assessment   • Updated Behavioral Observations Program to include additional proactive indicators, 
+     now “Proactive HSE”   • Incorporated emergency management with HSEMS Incident Management   • Performance measurement and internal assessment under one HSEMS 
+     supporting function “Performance Evaluation” The HSEMS consists of 13 elements that set HSE expectations, provide an 
+avenue for employee engagement and drive HSE performance improvement.  The HSEMS aligns with the Plan-Do-Check-Act process-improvement 
+model and matures through the HSEMS Maturity Matrix. The matrix contains 
+three levels of maturity: fundamentals (1F), building skills (2BS) and continual 
+improvement (3CI), starting with fundamentals first, then building up through 
+additional levels.  While we continue to develop all elements of the HSEMS, in 2020 we directed 
+our primary efforts to four foundational elements: Management Commitment; 
+Proactive HSE; Hazard Identification and Risk Assessment; and Standards, Guidelines, 
+and Procedures.  HSE MANAGEMENT SYSTEM61HSE MANAGEMENT SYSTEM63Hierarchy of ControlHSE Information Management System In 2019, Pioneer implemented a new HSE information management system. The project was a collaborative process with departments throughout the company, and the system went live in 2020. The primary 
+benefits of the new system are:   • Improves visibility and accountability for HSE 
+     compliance and culture throughout the organization   • Establishes an enterprise-level platform that will 
+     enable Pioneer to continue to standardize and      improve our HSE risk management processes   • Demonstrates our commitment to HSE and 
+     Sustainability through investment in tools that    
+     raise the level of employee and management 
+     engagement daily   • Enables enhanced sharing of lessons learned and 
+     proactive HSE indicators across the company and 
+     with our contractors   • Reduces technology costs and risks by moving to 
+     industry-leading, cloud-based solutions  HSE Risk Register  Through our risk register process, we periodically evaluate known risks and identify and review new 
+HSE risks through brainstorming sessions. Facilitated by HSE business partners, Pioneer subject matter 
+experts evaluate and score risks based on these criteria: level of impact, likelihood of occurrence, reputational risk, public access, financial risk, current practices and regulatory guidance. Necessary 
+changes, additions or existing controls are 
+documented, and summary conclusions are 
+presented to the HSEC at the business level. 
+These findings aid the HSEC in goal setting, defining proactive measures and developing risk controls 
+to mitigate serious exposures. If needed, risk controls are defined and put into place to minimize the 
+severity or frequency/exposure of an adverse event and reduce overall risk. We utilize the hierarchy 
+of control model when scoring the effectiveness 
+of our controls in reducing risk. HSE MANAGEMENT SYSTEM64Workforce Health and Safety Pioneer is committed to sending our 
+workforce home safe every day. Our 
+dedication to protecting employees’ health and safety working in and around company facilities and operating areas is supported by enforcing standards, corporate policies, and responsible and ethical procedures. In 2019, Pioneer enhanced HSE training through a targeted program that assigns employee 
+training by a pre-defined exposure ranking. Our HSE training program covers both 
+compliance and cultural HSE topics, ranging from incident management to confined space to behavior observations. The training 
+curriculum follows OSHA standards and 
+includes both new-hire orientation and 
+ongoing training for our employees. In 2019, more than 14,000 hours were dedicated 
+to HSE training.  Health and Safety performance metrics are 
+provided within the 2020 Sustainability 
+Performance Data Table at the end of 
+this report.  WORKFORCE HEALTH AND SAFETY65While Pioneer has many Health and Safety 
+programs that we continuously enhance, in 2019/2020 there were four programs in which Pioneer made significant advancements:  Serious Exposure HSE 
+Event Management In 2020, Pioneer introduced our Serious Exposure program across all operations. While appropriate management of all HSE events matters, the Serious 
+Exposure method prioritizes the highest-risk events, bringing increased visibility and proactive, consistent solutions to these more urgent situations. Our stance and independent research support the principle that reducing severe incidents requires 
+a different strategy than reducing minor incidents. Our Serious Exposure program is similar to the Serious Injury and Fatality (SIF) programs of 
+other companies; however, Pioneer also includes 
+environmental incidents.  Serious Exposure HSE 
+Event Management Motor Vehicle Safety Contractor Safety Site Coordination Serious Exposure MethodologyWORKFORCE HEALTH AND SAFETY66Motor Vehicle Safety Pioneer is committed to providing our drivers 
+the best possible tools through education and training, sound practices, and skill building. In 2019 and throughout 2020, Pioneer addressed 
+the critical mental component of driving by 
+implementing the S.A.F.E.R. driver training 
+program. It provides a cognitive approach to 
+training by utilizing classroom techniques, 
+a driving safety assessment and a risk 
+assessment drive. In 2020, Pioneer implemented the next generation of our In-Vehicle Monitoring System (IVMS). 
+Our system has evolved far beyond the basic ability to locate trucks on a map. Today, we use this technology to improve driver safety, optimize maintenance, monitor vehicle health, automate mileage reporting and record fuel use. The National Safety Council (NSC) and the Texas Department of Transportation have, for the third year in a row, honored Pioneer with the Texas 
+Employer Traffic Safety Award. As the NSC stated in its award notes, Pioneer is “a leader in the area of traffic safety and an example for Texas employers statewide.” In 2020, we have worked with the NSC Our Driving Concern program to share best 
+practices externally through a series of webinars.  Motor Vehicle Incident Rate Pioneer expects all motor vehicle incidents to 
+be reported, regardless of severity. Pioneer defines a motor vehicle incident (MVI) as any incident 
+involving a company owned/operated motor 
+vehicle, in gear and under physical control of the driver. Reportable MVIs that count toward the overall rate are incidents where a Pioneer 
+employee or third-party sustains an injury that requires medical treatment beyond first aid 
+Building a PartnershipWORKFORCE HEALTH AND SAFETY67and/or where a company or third-party vehicle cannot be safely driven from the scene. In 2019, 
+Pioneer had an MVI rate of 0.53 incidents per million miles driven. Contractor Safety Building contractor partnerships has resulted 
+in a 37 percent year-over-year (2018 to 2019) 
+reduction in contractor health and safety 
+recordable incident rate on Pioneer locations. Pioneer has realized those results through 
+continuous improvement of the five contractor program elements: pre-qualification, selection, on-boarding, evaluation, monitoring and 
+decommissioning. These elements lead to 
+a collaborative approach with contractors 
+throughout their relationship with Pioneer.  Site Coordination Pioneer developed a site coordination process 
+in 2018 and rolled it out in 2019. The process 
+provides a standardized system for coordinating 
+a safe working environment in situations where two or more workgroups are performing 
+simultaneous operations at Pioneer locations. Increased site coordination is a key component of increasing onsite awareness and reducing risk during complex operations. Site coordination objectives are to: provide an enterprise-wide 
+standard approach for coordinating safe 
+operations at each of our wellsite, production 
+and construction locations, clarify on-location 
+roles and responsibilities, establish expectations 
+for site coordinators and equip them with 
+standardized tools to execute those expectations. 
+Health Industrial Hygiene Pioneer understands the importance of worker 
+health and established an Industrial Hygiene 
+program with the deliberate goal of eliminating 
+or reducing risks when a hazardous condition arises. The Industrial Hygiene program works in conjunction with the HSE Risk Registry process.  Security Personnel and Programs Security is a material risk for many oil and gas companies. Pioneer takes a preemptive and robust security approach for those risks that are present within our operations. Pioneer participates in the Energy Security Council, which provides leading-
+edge security forces training. We are also an active member of the Permian Basin Oil Field Crime Committee. This committee promotes collaboration among 186 members, which include Permian Basin oil and gas company security departments and law enforcement agencies. Additionally, our security professionals maintain strong working relationships with federal and state prosecutors, local officials, and police chiefs and officers. These relationships are invaluable in conducting our business ethically and safely for those who support Pioneer and live in our committees. Pioneer retains an internal Security Department to manage all aspects of security 
+for our staff, proprietary information and operations including
