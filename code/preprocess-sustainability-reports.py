@@ -62,9 +62,12 @@ column_names = ['company-type', 'company-ticker', 'year', 'part', 'text'] # add 
 for i, f in enumerate(dl):
     # open file
     path_in = os.path.join(ROOT_DIR,f)
-    with open(path_in, encoding='cp1252') as file:
-        info = [file.read()]
-    
+    try:
+        with open(path_in, encoding='cp1252') as file:
+            info = [file.read()]
+    except: # UnicodeDecodeError
+        print(f"Failed to read {path_in} with cp1252 encoding.")
+
     # add metadata
     filename_parts = f.split("-")
     company_type = 'N/A'
