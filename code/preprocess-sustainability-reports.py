@@ -21,6 +21,7 @@ CLEAN_ENERGY_TICKERS = ["FSLR", "ENPH", "SEDG", "ED", "PLUG", "ORA", "SHLS", "RU
 def remove_extra_chars(text): # remove digits, punctuation, special characters, keep spaces
     pattern = r'[^a-zA-Z\s]'
     return re.sub(pattern, '', text)
+    # TODO: drop spaces
 
 def basic_clean(df):
     df['text'] = df['text'].astype('str')
@@ -35,6 +36,9 @@ def stem_sentence(sentence):
     stemmed_tokens = [porter_stemmer.stem(token) for token in tokens]
     return ' '.join(stemmed_tokens)
 
+ #/opt/homebrew/Cellar/gcc/13.1.0
+
+
 df = pd.DataFrame()
 column_names = ['company-type', 'company-ticker', 'year', 'part', 'text']
 dl = sorted(fop.get_files_in_dir(ROOT_DIR)) # sort files chronologically
@@ -46,6 +50,7 @@ for i, f in enumerate(dl):
             info = [file.read()]
     except: # UnicodeDecodeError
         print(f"Failed to read {path_in} with cp1252 encoding.")
+    # TODO: fix encodings
 
     # get metadata:
     filename_parts = f.split("-")
@@ -59,6 +64,7 @@ for i, f in enumerate(dl):
             'year': filename_parts[1],
             'part': filename_parts[2][:-4],
             'text': info,}
+    # TODO: Add metadata for available subheadings
     
     # create dataframe:
     df_temp = pd.DataFrame(data, columns=column_names)
@@ -75,6 +81,10 @@ for i, f in enumerate(dl):
 
 df.to_csv(os.path.join(ROOT_DIR, PROCESSED_DIR + 'processed-data.csv'), index=False) 
 
+
+# TODO: anything after this should go in the modeling R script
+
+
 # assmeble stop words:
 stop_words  = (stopwords.words('english'))
 added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","ours","ourselves","use",
@@ -84,6 +94,10 @@ added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","our
                "got","cant","could","him","his","this","had","he","her","she","hers","their","they're","things",
                "go","going","let","would","make","like","come","us"]
 stop_words= list(np.append(stop_words,added_words))
+
+
+
+
 
 # tokenize data:
 vectorizer = CountVectorizer(stop_words = stop_words,
@@ -113,3 +127,5 @@ sorted_word_count = sorted(word_count_dict.items(), key=lambda x: x[1])
 top_n = 10 
 for word, count in sorted_word_count[:top_n]:
     print(f"{word}: {count}")
+
+# TODO: get metrics from sec filings
