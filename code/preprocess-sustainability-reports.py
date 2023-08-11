@@ -37,9 +37,6 @@ def stem_sentence(sentence):
     stemmed_tokens = [porter_stemmer.stem(token) for token in tokens]
     return ' '.join(stemmed_tokens)
 
- #/opt/homebrew/Cellar/gcc/13.1.0
-
-
 df = pd.DataFrame()
 column_names = ['company-type', 'company-ticker', 'year', 'part', 'text']
 dl = sorted(fop.get_files_in_dir(ROOT_DIR)) # sort files chronologically
@@ -83,9 +80,8 @@ for i, f in enumerate(dl):
 df.to_csv(os.path.join(ROOT_DIR, PROCESSED_DIR + 'processed-data.csv'), index=False) 
 
 
-# TODO: anything after this should go in the modeling R script
-
-
+# MODELING (DONE IN R)
+'''
 # assmeble stop words:
 stop_words  = (stopwords.words('english'))
 added_words = ["will","has","by","for","hi","hey","are","as","i","we","our","ours","ourselves","use",
@@ -128,5 +124,4 @@ sorted_word_count = sorted(word_count_dict.items(), key=lambda x: x[1])
 top_n = 10 
 for word, count in sorted_word_count[:top_n]:
     print(f"{word}: {count}")
-
-# TODO: get metrics from sec filings
+'''
