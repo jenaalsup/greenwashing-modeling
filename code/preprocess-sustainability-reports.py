@@ -20,8 +20,9 @@ CLEAN_ENERGY_TICKERS = ["FSLR", "ENPH", "SEDG", "ED", "PLUG", "ORA", "SHLS", "RU
 
 def remove_extra_chars(text): # remove digits, punctuation, special characters, keep spaces
     pattern = r'[^a-zA-Z\s]'
-    return re.sub(pattern, '', text)
-    # TODO: drop spaces
+    cleaned_string = re.sub(pattern, '', text)
+    consolidated_spaces_string = re.sub(r'\s+', ' ', cleaned_string)
+    return consolidated_spaces_string
 
 def basic_clean(df):
     df['text'] = df['text'].astype('str')
