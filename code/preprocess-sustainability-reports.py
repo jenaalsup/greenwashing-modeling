@@ -13,11 +13,6 @@ PROCESSED_DIR = "processed_reports/"
 ENERGY_TICKERS = ["XOM", "CVX", "COP", "SLB", "EOG", "MPC", "PXD", "PSX", "VLO", "OXY", "WMB", "HES", "LNG", "KMI", "DVN"]
 CLEAN_ENERGY_TICKERS = ["FSLR", "ENPH", "SEDG", "ED", "PLUG", "ORA", "SHLS", "RUN", "ARRY", "AGR", "NOVA", "CWEN", "GPRE", "SPWR", "FCEL"]
 
-# output relative paths
-#CORPUS_FILEPATH_PREFIX = "corpus/"
-#GENSIM_CORPUS_FILEPATH = "corpus.obj"
-#COUNTVECTOR_FILEPATH = "countvec.obj"
-
 def remove_extra_chars(text): # remove digits, punctuation, special characters, keep spaces
     pattern = r'[^a-zA-Z\s]'
     cleaned_string = re.sub(pattern, '', text)
@@ -46,9 +41,8 @@ for i, f in enumerate(dl):
     try:
         with open(path_in, encoding='cp1252') as file:
             info = [file.read()]
-    except: # UnicodeDecodeError
+    except: # potential UnicodeDecodeError
         print(f"Failed to read {path_in} with cp1252 encoding.")
-    # TODO: fix encodings
 
     # get metadata:
     filename_parts = f.split("-")
