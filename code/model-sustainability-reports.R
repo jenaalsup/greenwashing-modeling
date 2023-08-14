@@ -1,6 +1,6 @@
 #### Load House Data 
 
-textData <- read.csv("Data/TwitterSpeech.csv")
+textData <- read.csv("reports/processed-data.csv")
 textData <- textData[!duplicated(textData$doc_id),]
 
 # create a week
@@ -11,12 +11,15 @@ textData$week   <- isoweek(textData$date)
 
 ## prepare JST model
 attach(textData)
-llDisplay <- data.frame(doc_id = paste(doc_id),text = paste(tweet),week=week,handle=handle,month=month,day=day,year=year,party=party,state=state,stringsAsFactors = F)
+llDisplay <- data.frame(doc_id = paste(doc_id),text = paste(text),week=week,handle=handle,month=month,day=day,year=year,party=party,state=state,stringsAsFactors = F)
 detach(textData)
 
-stop_words_custom = c("this","discuss","community","learn","congressional","amendment","speaker","say","said","talk","congrats","pelosi","gop","congratulations","are","as","i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours","he","her","him","she","hers","that","be","with","their","they're","is","was","been","not","they","it","have","will","has","by","for","madam","Speaker","Mister","Gentleman","Gentlewoman","lady","voinovich","kayla","111th","115th","114th","rodgers",         "clerk" ,    "honor" ,   "address"   ,     
-                      "house" , "start"   ,"amend","bipartisan","bill",   "114th"    ,   "congress"  ,     
-                      "one",   "thing"    ,   "learned"    ,   "legislator","things" ,"things","can't","can","cant","will","go","going","let","lets","let's","say","says","know","talk","talked","talks","lady","honorable","dont","think","said","something","something","wont","people","make","want","went","goes","congressmen","people","person","like","come","from","need","us",paste(textData$firstname),paste(tidytext::stop_words$word),stopwords())
+stop_words_custom = c("will","has","by","for","hi","hey","are","as","i","we","our","ours","ourselves","use",
+                       "you","your","yours","that","f","e","s","t","c","n","u","v","l","p","d","b","g","k","m","x","y","z",
+                       "be","with","is","was","been","not","they","way","and","to","do","go","on","have","from",
+                       "at","but","or","an","if","all","so","it","thing","put","well","take","see","","can't","can",
+                       "got","cant","could","him","his","this","had","he","her","she","hers","their","they're","things",
+                       "go","going","let","would","make","like","come","us",paste(textData$firstname),paste(tidytext::stop_words$word),stopwords())
 # Create tokens for the words you keep
 toks1 <- tokens(corpus(llDisplay), remove_punct = TRUE)
 toks2 <- tokens_remove(toks1, stop_words_custom)
