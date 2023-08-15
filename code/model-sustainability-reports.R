@@ -1,17 +1,16 @@
 #### Load House Data 
-
-textData <- read.csv("reports/processed-data.csv")
+textData <- read.csv("reports/processed_reports/processed-data.csv")
 textData <- textData[!duplicated(textData$doc_id),]
 
 # create a week
-textData$date <- as.POSIXct(
-  paste0(textData$year,"-",textData$month,"-",textData$day),
-  format="%Y-%b-%e")
-textData$week   <- isoweek(textData$date)
+#textData$date <- as.POSIXct(
+  #paste0(textData$year,"-",textData$month,"-",textData$day),
+  #format="%Y-%b-%e")
+#textData$week   <- isoweek(textData$date)
 
 ## prepare JST model
 attach(textData)
-llDisplay <- data.frame(doc_id = paste(doc_id),text = paste(text),week=week,handle=handle,month=month,day=day,year=year,party=party,state=state,stringsAsFactors = F)
+llDisplay <- data.frame(doc_id = paste(doc_id),text = paste(text),company_type=paste(company_type),company_ticker=paste(company_ticker),year=paste(year),part=part,stringsAsFactors = F)
 detach(textData)
 
 stop_words_custom = c("will","has","by","for","hi","hey","are","as","i","we","our","ours","ourselves","use",

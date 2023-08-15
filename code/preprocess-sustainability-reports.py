@@ -33,7 +33,7 @@ def stem_sentence(sentence):
     return ' '.join(stemmed_tokens)
 
 df = pd.DataFrame()
-column_names = ['doc_id', 'company-type', 'company-ticker', 'year', 'part', 'text']
+column_names = ['doc_id', 'company_type', 'company_ticker', 'year', 'part', 'text']
 dl = sorted(fop.get_files_in_dir(ROOT_DIR)) # sort files chronologically
 for i, f in enumerate(dl):
     # open file:
@@ -52,8 +52,8 @@ for i, f in enumerate(dl):
     if (filename_parts[0].upper() in CLEAN_ENERGY_TICKERS):
         company_type = 'clean-energy'
     data = {'doc_id': f,
-            'company-type': company_type,
-            'company-ticker': filename_parts[0],
+            'company_type': company_type,
+            'company_ticker': filename_parts[0],
             'year': filename_parts[1],
             'part': filename_parts[2][:-4],
             'text': info,}
