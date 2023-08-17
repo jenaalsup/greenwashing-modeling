@@ -5,6 +5,9 @@ library(tidyverse)
 library(quanteda)
 library(parallel)
 library(stm)
+library(tm)
+library(tmtoolkit)
+library(ggplot2)
 
 # load data
 textData <- read.csv("reports/processed_reports/processed-data.csv")
@@ -65,7 +68,19 @@ model_stm <- mclapply(kk,
 save(model_stm,file="modelOutput-House-STM2.RData")
 
 
-labelTopics(model_stm[[2]])
+labelTopics(model_stm[[1]])
+
+library(stm)
+
+coherence_scores <- lapply(model_stm, function(model) {
+  semanticCoherence(model, documents)
+})
+
+# Calculate the average coherence score for each model
+average_coherence_per_model <- sapply(coherence_scores, mean)
+
+# Print the average coherence scores
+print(average_coherence_per_model)
 
 ### Google how to compute perplexity and coherence, topic selection 
 
