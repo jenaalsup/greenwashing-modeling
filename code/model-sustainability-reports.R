@@ -67,26 +67,21 @@ model_stm <- mclapply(kk,
 
 save(model_stm,file="modelOutput-House-STM2.RData")
 
+# view topic stats
+labelTopics(model_stm[[4]]) # FREX = frequent + not shared by other topics
 
-labelTopics(model_stm[[1]])
-
-library(stm)
-
+# calculate umass coherence
 coherence_scores <- lapply(model_stm, function(model) {
   semanticCoherence(model, documents)
 })
-
-# Calculate the average coherence score for each model
 average_coherence_per_model <- sapply(coherence_scores, mean)
-
-# Print the average coherence scores
 print(average_coherence_per_model)
 
-### Google how to compute perplexity and coherence, topic selection 
+# topic selection: 4th model, 20 topics, topic 5 & 14
 
 # After topic selection
-model_stm[[1]]$theta # doc-topic matrix
-model_stm[[1]]$settings$covariates # covariates 
+model_stm[[4]]$theta # doc-topic matrix - row is doc and column is probability it is in that topic
+model_stm[[4]]$settings$covariates # covariates 
 
 ## Once you're happy with the model and did topic selection, correlate the columns of theta(ie the topics) which are green with the financial data
 ## Plos the scatter with the slope
@@ -102,5 +97,6 @@ m(financial_1~topic1)
 m(financial_1~topick)
 lm(financial_1~topic1+..+topic_k)
 lm(financial_2~topic1+..+topic_k)
+
 
 
