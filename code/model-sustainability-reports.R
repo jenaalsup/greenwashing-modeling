@@ -78,16 +78,58 @@ average_coherence_per_model <- sapply(coherence_scores, mean)
 print(average_coherence_per_model)
 
 # topic selection: 4th model, 20 topics, topic 5 & 14
-
-# After topic selection
 model_stm[[4]]$theta # doc-topic matrix - row is doc and column is probability it is in that topic
+model_stm[[4]]$theta[, 5]
+model_stm[[4]]$theta[, 14]
+
+# after topic selection
 model_stm[[4]]$settings$covariates # covariates 
 
-## Once you're happy with the model and did topic selection, correlate the columns of theta(ie the topics) which are green with the financial data
-## Plos the scatter with the slope
+# correlate the green columns of theta (the topics) with the capex data
+# METHOD 1:
+topic_proportions <- model_stm[[4]]$theta
+capex_percentages = round(100 * textData$env_capex / textData$capex, digits = 0)
+num_topics <- ncol(model_stm[[4]]$theta)
+correlations <- numeric(num_topics)
+for (topic_idx in 1:num_topics) {
+  topic_proportions <- model_stm[[4]]$theta[, topic_idx]
+  correlations[topic_idx] <- cor(topic_proportions, capex_percentages)
+}
+# METHOD 2:
+num_documents <- nrow(textData)
+num_topics <- ncol(model_stm[[4]]$theta)
+correlations <- matrix(0, nrow = num_documents, ncol = num_topics)
 
-## Use ggplot scatter with regression slope (confidence interval)
+for (doc_idx in 1:num_documents) {
+  for (topic_idx in 1:num_topics) {
+    topic_proportions <- model_stm[[4]]$theta[doc_idx, topic_idx]
+    capex_percentage <- capex_percentages[doc_idx]
+    
+    # Check if either value is zero before calculating the correlation
+    if (!is.na(topic_proportions) && !is.na(capex_percentage) && topic_proportions != 0 && capex_percentage != 0) {
+      correlations[doc_idx, topic_idx] <- cor(topic_proportions, capex_percentage)
+    }
+  }
+}
+print(correlations) # TODO: all 0 for energy, all NA for renewable energy
 
+# each dot is a company, plot the probability that a company's documents appear in a selected topic against the env capex percentage for that company
+# TODO: import actual data here
+company_data <- data.frame(
+  Company = c("agr", "arry", "cop", "cvx", "cwen"),
+  Topic_Probability = c(0.8, 0.6, 0.4, 0.7, 0.9),
+  Env_Capex_Percentage = c(15, 20, 10, 25, 30)
+)
+
+ggplot(company_data, aes(x = Env_Capex_Percentage, y = Topic_Probability)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE) + # method = "lm" adds regression, se = TRUE adds confidence interval
+  labs(title = "Topic Probability vs. Env Capex Percentage",
+       x = "Environmental Capex Percentage",
+       y = "Topic Probability") +
+  theme_minimal()
+
+# TODO:
 data_set_with_topics_and_metadata<- data_set_with_topics_and_metadata %>%group_by(ticker) %>%summarise_all(mean(topics)) 
 #Using PCA, plot the first two coordinates in a scatter (dim1,dim2) and color code by company type 
 
@@ -97,6 +139,4 @@ m(financial_1~topic1)
 m(financial_1~topick)
 lm(financial_1~topic1+..+topic_k)
 lm(financial_2~topic1+..+topic_k)
-
-
 
