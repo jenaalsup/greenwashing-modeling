@@ -66,7 +66,7 @@ model_stm <- mclapply(kk,
                             seed = 153332),
                             mc.cores = getOption("mc.cores", 5L))
 
-save(model_stm,file="modelOutput-House-STM2.RData")
+save(model_stm,file="modelOutput-House-STM.RData")
 
 # view topic stats
 labelTopics(model_stm[[4]]) # FREX = frequent + not shared by other topics
@@ -85,10 +85,9 @@ model_stm[[4]]$theta[, 14]
 
 # word clouds
 topic_5_gradient_colors <- colorRampPalette(c("darkblue", "blue", "deepskyblue", "darkturquoise", "cadetblue3"))(20)
-cloud(model_stm[[4]], topic = 5, scale = c(2,.25), max.words = 30, color = topic_5_gradient_colors)
+cloud(model_stm[[4]], topic = 5, scale = c(2,.25), max.words = 40, color = topic_5_gradient_colors)
 topic_14_gradient_colors <- colorRampPalette(c("darkgreen", "forestgreen", "chartreuse3", "darkseagreen3", "darkseagreen2"))(20)
-cloud(model_stm[[4]], topic = 14, scale = c(2,.25), max.words = 30, color = topic_14_gradient_colors)
-
+cloud(model_stm[[4]], topic = 14, scale = c(2,.25), max.words = 40, color = topic_14_gradient_colors)
 
 # after topic selection
 model_stm[[4]]$settings$covariates # covariates 
