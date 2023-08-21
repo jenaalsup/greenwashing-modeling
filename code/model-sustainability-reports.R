@@ -6,8 +6,9 @@ library(quanteda)
 library(parallel)
 library(stm)
 library(tm)
-library(tmtoolkit)
 library(ggplot2)
+library(wordcloud)
+library(RColorBrewer)
 
 # load data
 textData <- read.csv("reports/processed_reports/processed-data.csv")
@@ -15,7 +16,7 @@ textData <- textData[!duplicated(textData$doc_id),]
 capex_data <- read_csv("reports/processed_reports/capex-data.csv")
 textData <- textData %>%left_join(capex_data)
 
-# prepare JST model
+# prepare model
 attach(textData)
 llDisplay <- data.frame(doc_id = paste(doc_id),text = paste(text),company_type=paste(company_type),company_ticker=paste(company_ticker),year=paste(year),part=part,stringsAsFactors = F)
 detach(textData)
@@ -82,6 +83,13 @@ model_stm[[4]]$theta # doc-topic matrix - row is doc and column is probability i
 model_stm[[4]]$theta[, 5]
 model_stm[[4]]$theta[, 14]
 
+# word clouds
+topic_5_gradient_colors <- colorRampPalette(c("darkblue", "blue", "deepskyblue", "darkturquoise", "cadetblue3"))(20)
+cloud(model_stm[[4]], topic = 5, scale = c(2,.25), max.words = 30, color = topic_5_gradient_colors)
+topic_14_gradient_colors <- colorRampPalette(c("darkgreen", "forestgreen", "chartreuse3", "darkseagreen3", "darkseagreen2"))(20)
+cloud(model_stm[[4]], topic = 14, scale = c(2,.25), max.words = 30, color = topic_14_gradient_colors)
+
+
 # after topic selection
 model_stm[[4]]$settings$covariates # covariates 
 
@@ -95,6 +103,7 @@ for (topic_idx in 1:num_topics) {
   topic_proportions <- model_stm[[4]]$theta[, topic_idx]
   correlations[topic_idx] <- cor(topic_proportions, capex_percentages)
 }
+print(correlations)
 # METHOD 2:
 num_documents <- nrow(textData)
 num_topics <- ncol(model_stm[[4]]$theta)
@@ -113,7 +122,7 @@ for (doc_idx in 1:num_documents) {
 }
 print(correlations) # TODO: all 0 for energy, all NA for renewable energy
 
-# each dot is a company, plot the probability that a company's documents appear in a selected topic against the env capex percentage for that company
+# each dot is a company, plot the probability that a company's documents appear in a selected topic against the env capex percentage for that company - need to average everything across a company
 # TODO: import actual data here
 company_data <- data.frame(
   Company = c("agr", "arry", "cop", "cvx", "cwen"),
@@ -129,9 +138,24 @@ ggplot(company_data, aes(x = Env_Capex_Percentage, y = Topic_Probability)) +
        y = "Topic Probability") +
   theme_minimal()
 
-# TODO:
+# TODO: get dataset with topics and metadata
 data_set_with_topics_and_metadata<- data_set_with_topics_and_metadata %>%group_by(ticker) %>%summarise_all(mean(topics)) 
-#Using PCA, plot the first two coordinates in a scatter (dim1,dim2) and color code by company type 
+# TODO: Using PCA, plot the first two coordinates in a scatter (dim1,dim2) and color code by company type 
+# Perform PCA
+pca_result <- PCA(data[, c("dim1", "dim2")], scale.unit = TRUE)
+
+# Combine PCA results with original data
+data_pca <- cbind(data, pca_result$ind$coord)
+
+# Create the scatter plot using ggplot2
+ggplot(data_pca, aes(x = Dim.1, y = Dim.2, color = company_type)) +
+  geom_point() +
+  labs(x = "Principal Component 1",
+       y = "Principal Component 2",
+       title = "PCA Scatter Plot by Company Type") +
+  theme_minimal()
+
+
 
 # subset to fossil fuel companies
 lm(financial_1~topic1) 
