@@ -89,6 +89,20 @@ cloud(model_stm[[4]], topic = 5, scale = c(2,.25), max.words = 40, color = topic
 topic_14_gradient_colors <- colorRampPalette(c("darkgreen", "forestgreen", "chartreuse3", "darkseagreen3", "darkseagreen2"))(20)
 cloud(model_stm[[4]], topic = 14, scale = c(2,.25), max.words = 40, color = topic_14_gradient_colors)
 
+
+# TODO: plot env capex percentage data
+filtered_data <- textData %>%
+  filter(company_type == "energy")
+agg_data <- filtered_data %>%
+  group_by(company_ticker) %>%
+  summarise(total_spending_percentage = 100 * sum(env_capex) / sum(capex))
+ggplot(agg_data, aes(x = company_ticker, y = total_spending_percentage)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Company Ticker", y = "Total Spending", title = "Total Spending by Company")
+
+#barplot(textData$env_capex, names.arg = textData$company_ticker)
+
+
 # after topic selection
 model_stm[[4]]$settings$covariates # covariates 
 
