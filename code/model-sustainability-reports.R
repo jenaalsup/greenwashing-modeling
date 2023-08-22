@@ -9,6 +9,8 @@ library(tm)
 library(ggplot2)
 library(wordcloud)
 library(RColorBrewer)
+library(stats)
+library(factoextra)
 
 # load data
 textData <- read.csv("reports/processed_reports/processed-data.csv")
@@ -89,8 +91,7 @@ cloud(model_stm[[4]], topic = 5, scale = c(2,.25), max.words = 40, color = topic
 topic_14_gradient_colors <- colorRampPalette(c("darkgreen", "forestgreen", "chartreuse3", "darkseagreen3", "darkseagreen2"))(20)
 cloud(model_stm[[4]], topic = 14, scale = c(2,.25), max.words = 40, color = topic_14_gradient_colors)
 
-
-# TODO: plot env capex percentage data for energy firms
+# plot env capex percentage data for energy firms
 filtered_data <- textData %>%
   filter(company_type == "energy")
 agg_data <- filtered_data %>%
@@ -98,11 +99,7 @@ agg_data <- filtered_data %>%
   summarise(total_spending_percentage = 100 * sum(env_capex) / sum(capex))
 ggplot(agg_data, aes(x = company_ticker, y = total_spending_percentage)) +
   geom_bar(stat = "identity") +
-  labs(x = "Company Ticker", y = "Total Spending", title = "Total Spending by Company")
-
-
-# after topic selection
-model_stm[[4]]$settings$covariates # covariates 
+  labs(x = "Company Ticker", y = "Environmental Percentage of Capex", title = "Environmental Spending by Company") + scale_y_continuous(limits=c(0,100))
 
 # correlate the green columns of theta (the topics) with the capex data
 averaged_data <- model_stm[[4]]$theta
@@ -126,8 +123,7 @@ pca_input <-pca_data    %>%
   summarise_all(mean)
 
 pca_mat<-as.matrix(pca_input%>%ungroup()%>%select(-company_ticker,-company_type))
-library(stats)
-library(factoextra)
+
 fit  <-prcomp(pca_mat)
 res.var <- get_pca_var(fit) # this tells you which variables (in our case, topics) contribute the most to each dimension/the variation in the data
 ind.var <- get_pca_ind(fit)
@@ -194,34 +190,6 @@ ggplot(averaged_data %>%filter(company_type=="energy",year>2020), aes(x = capex,
        y = "Topic Probability") +
   theme_minimal()
 
-
-# METHOD 1:
-topic_proportions <- model_stm[[4]]$theta
-capex_percentages = round(100 * textData$env_capex / textData$capex, digits = 0)
-num_topics <- ncol(model_stm[[4]]$theta)
-correlations <- numeric(num_topics)
-for (topic_idx in 1:num_topics) {
-  topic_proportions <- model_stm[[4]]$theta[, topic_idx]
-  correlations[topic_idx] <- cor(topic_proportions, capex_percentages)
-}
-print(correlations)
-# METHOD 2:
-num_documents <- nrow(textData)
-num_topics <- ncol(model_stm[[4]]$theta)
-correlations <- matrix(0, nrow = num_documents, ncol = num_topics)
-
-for (doc_idx in 1:num_documents) {
-  for (topic_idx in 1:num_topics) {
-    topic_proportions <- model_stm[[4]]$theta[doc_idx, topic_idx]
-    capex_percentage <- capex_percentages[doc_idx]
-    
-    # Check if either value is zero before calculating the correlation
-    if (!is.na(topic_proportions) && !is.na(capex_percentage) && topic_proportions != 0 && capex_percentage != 0) {
-      correlations[doc_idx, topic_idx] <- cor(topic_proportions, capex_percentage)
-    }
-  }
-}
-print(correlations) # TODO: all 0 for energy, all NA for renewable energy
 
 # each dot is a company, plot the probability that a company's documents appear in a selected topic against the env capex percentage for that company - need to average everything across a company
 # TODO: import actual data here
