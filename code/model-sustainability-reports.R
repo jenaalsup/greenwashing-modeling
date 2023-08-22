@@ -40,7 +40,7 @@ toks3 <- tokens_wordstem(toks3)
 # create a document feature matrix (quanteda style) to run model
 N = nrow(llDisplay)
 dfm_speeches <- dfm(toks3, remove_punct = TRUE, remove_numbers = TRUE, stem = T) %>% 
-  dfm_trim(min_termfreq = 15, min_docfreq =0.01*N, max_docfreq = 0.8*N) # was 25, 0.002, 0.4
+  dfm_trim(min_termfreq = 15, min_docfreq =0.01*N, max_docfreq = 0.8*N) 
 dfm_speeches <- dfm_subset(dfm_speeches,ntoken(dfm_speeches) >= 1)
 
 # prep data for stm
@@ -69,7 +69,7 @@ model_stm <- mclapply(kk,
 save(model_stm,file="modelOutput-House-STM.RData")
 
 # view topic stats
-labelTopics(model_stm[[4]]) # FREX = frequent + not shared by other topics
+labelTopics(model_stm[[4]])
 
 # calculate umass coherence
 coherence_scores <- lapply(model_stm, function(model) {
@@ -96,11 +96,11 @@ agg_data <- filtered_data %>%
   group_by(company_ticker) %>%
   summarise(total_spending_percentage = 100 * sum(env_capex) / sum(capex))
 color_palette <- scales::viridis_pal(option = "D")(length(unique(agg_data$company_ticker)))
-ggplot(agg_data, aes(x = company_ticker, y = total_spending_percentage, , fill = company_ticker)) +
+ggplot(agg_data, aes(x = company_ticker, y = total_spending_percentage, fill = company_ticker)) +
   geom_bar(stat = "identity") + scale_fill_manual(values = color_palette) +
   labs(x = "Company Ticker", y = "Environmental Percentage of Capex", title = "Environmental Spending by Company") + scale_y_continuous(limits=c(0,100))
 
-# create a PCA
+# generate a principal component analysis (pca)
 pca_data <- model_stm[[4]]$theta
 pca_data <- cbind(textData,pca_data)
 pca_input <-pca_data    %>% 
@@ -110,7 +110,7 @@ pca_input <-pca_data    %>%
 pca_mat<-as.matrix(pca_input%>%ungroup()%>%select(-company_ticker,-company_type))
 
 fit  <-prcomp(pca_mat)
-res.var <- get_pca_var(fit) # outputs which variables (topics) contribute the most to each dimension ~ aka the variation in the data
+res.var <- get_pca_var(fit) # output which variables (topics) contribute the most to each dimension ~ aka the variation in the data
 ind.var <- get_pca_ind(fit)
 pc1 <- ind.var$coord[,1]
 pc2 <- ind.var$coord[,2]
@@ -132,13 +132,18 @@ ggplot(pca_input,aes(x=dim1,y=dim2,colour=company_type))+geom_point() +
 # correlate the green columns of theta (the topics) with the capex data
 averaged_data <- model_stm[[4]]$theta
 averaged_data <- cbind(textData,averaged_data)
-averaged_data <-averaged_data %>% group_by(company_ticker,year,company_type) %>% summarise(capex    = mean(env_capex/capex),
-                                                                          topic_5  = mean(`5`),
-                                                                          topic_14 = mean(`14`)) %>%
-                                                                          mutate(topic_avg=(topic_5+topic_14)/2)
-averaged_data_company <-averaged_data %>% group_by(company_ticker,company_type) %>%summarise(capex    = mean(env_capex/capex),
-                                                                                          topic_5  = mean(`5`),
-                                                                                          topic_14 = mean(`14`)) %>% mutate(topic_avg=(topic_5+topic_14)/2)
+averaged_data <-averaged_data %>% group_by(company_ticker,year,company_type) %>% 
+                                  summarise(capex = mean(env_capex/capex),
+                                  topic_5  = mean(`5`),
+                                  topic_14 = mean(`14`)) %>%
+                                  mutate(topic_avg=(topic_5+topic_14)/2)
+# don't group by year:
+#averaged_data_company <-averaged_data %>% group_by(company_ticker,company_type) %>% 
+                                  #summarise(capex = mean(env_capex/capex),
+                                  #topic_5  = mean(`5`),
+                                  #topic_14 = mean(`14`)) %>%
+                                  #mutate(topic_avg=(topic_5+topic_14)/2)
+
 # plots of stm results vs. capex data (6):
 
 # plot topic probability (avg of topics 5 and 14) vs. env capex percentage (each dot is a document)
