@@ -110,7 +110,7 @@ pca_input <-pca_data    %>%
 pca_mat<-as.matrix(pca_input%>%ungroup()%>%select(-company_ticker,-company_type))
 
 fit  <-prcomp(pca_mat)
-res.var <- get_pca_var(fit) # Outputs which variables (topics) contribute the most to each dimension ~ aka the variation in the data
+res.var <- get_pca_var(fit) # outputs which variables (topics) contribute the most to each dimension ~ aka the variation in the data
 ind.var <- get_pca_ind(fit)
 pc1 <- ind.var$coord[,1]
 pc2 <- ind.var$coord[,2]
@@ -139,6 +139,7 @@ averaged_data <-averaged_data %>% group_by(company_ticker,year,company_type) %>%
 averaged_data_company <-averaged_data %>% group_by(company_ticker,company_type) %>%summarise(capex    = mean(env_capex/capex),
                                                                                           topic_5  = mean(`5`),
                                                                                           topic_14 = mean(`14`)) %>% mutate(topic_avg=(topic_5+topic_14)/2)
+# plots of stm results vs. capex data (6):
 
 # plot topic probability (avg of topics 5 and 14) vs. env capex percentage (each dot is a document)
 ggplot(averaged_data %>%filter(company_type=="energy"), aes(x = 100*capex, y = topic_avg)) +
@@ -167,30 +168,29 @@ ggplot(averaged_data %>%filter(company_type=="energy"), aes(x = 100*capex, y = t
        y = "Climate Topic Probability") +
   theme_minimal()
 
-
-
-# TODO:
-ggplot(averaged_data %>%filter(company_type=="energy",year>2020), aes(x = capex, y = topic_avg)) +
+# plot topic probability (avg of topics 5 and 14) vs. env capex percentage (each dot is a document) for documents >2020
+ggplot(averaged_data %>%filter(company_type=="energy",year>2020), aes(x = 100*capex, y = topic_avg)) +
   geom_point() +
-  geom_smooth(method = "lm", se = TRUE) + # method = "lm" adds regression, se = TRUE adds confidence interval
-  labs(title = "Topic Probability vs. Env Capex Percentage",
+  geom_smooth(method = "lm", se = TRUE, color="darkorchid3") + # method = "lm" adds regression, se = TRUE adds confidence interval
+  labs(title = "Topic Prob. vs. Env Capex (years > 2020)",
        x = "Environmental Capex Percentage",
-       y = "Topic Probability") +
+       y = "Environmental Topic Probability (avg)") +
   theme_minimal()
 
-
-ggplot(averaged_data %>%filter(company_type=="energy",year>2020), aes(x = capex, y = topic_5)) +
+# plot topic 5 probability vs. env capex percentage for documents >2020
+ggplot(averaged_data %>%filter(company_type=="energy",year>2020), aes(x = 100*capex, y = topic_5)) +
   geom_point() +
-  geom_smooth(method = "lm", se = TRUE) + # method = "lm" adds regression, se = TRUE adds confidence interval
-  labs(title = "Topic Probability vs. Env Capex Percentage",
+  geom_smooth(method = "lm", se = TRUE, color="firebrick2") + # method = "lm" adds regression, se = TRUE adds confidence interval
+  labs(title = "Topic Prob. vs. Env Capex (years > 2020)",
        x = "Environmental Capex Percentage",
-       y = "Topic Probability") +
+       y = "Conservation/Biodiversity Topic Probability") +
   theme_minimal()
 
-ggplot(averaged_data %>%filter(company_type=="energy",year>2020), aes(x = capex, y = topic_14)) +
+# plot topic 14 probability vs. env capex percentage for documents >2020
+ggplot(averaged_data %>%filter(company_type=="energy",year>2020), aes(x = 100*capex, y = topic_14)) +
   geom_point() +
-  geom_smooth(method = "lm", se = TRUE) + # method = "lm" adds regression, se = TRUE adds confidence interval
-  labs(title = "Topic Probability vs. Env Capex Percentage",
+  geom_smooth(method = "lm", se = TRUE, color="royalblue2") + # method = "lm" adds regression, se = TRUE adds confidence interval
+  labs(title = "Topic Prob. vs. Env Capex (years > 2020)",
        x = "Environmental Capex Percentage",
-       y = "Topic Probability") +
+       y = "Climate Topic Probability") +
   theme_minimal()
