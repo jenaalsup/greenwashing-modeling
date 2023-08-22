@@ -37,17 +37,15 @@ toks2 <- tokens_remove(toks1, stop_words_custom)
 toks3 <- tokens_ngrams(toks2, 1:2) # was 1:3
 toks3 <- tokens_wordstem(toks3)
 
-# create a document feature matrix (quanteda style) to run jst
+# create a document feature matrix (quanteda style) to run model
 N = nrow(llDisplay)
 dfm_speeches <- dfm(toks3, remove_punct = TRUE, remove_numbers = TRUE, stem = T) %>% 
   dfm_trim(min_termfreq = 15, min_docfreq =0.01*N, max_docfreq = 0.8*N) # was 25, 0.002, 0.4
-
 dfm_speeches <- dfm_subset(dfm_speeches,ntoken(dfm_speeches) >= 1)
 
 # prep data for stm
 houseDfmSTM <- convert(dfm_speeches, to = "stm", 
                        docvars = docvars(dfm_speeches))
-
 documents <- houseDfmSTM$documents
 vocab     <- houseDfmSTM$vocab
 meta      <- houseDfmSTM$meta
@@ -80,16 +78,16 @@ coherence_scores <- lapply(model_stm, function(model) {
 average_coherence_per_model <- sapply(coherence_scores, mean)
 print(average_coherence_per_model)
 
-# topic selection: 4th model, 20 topics, topic 5 & 14
+# topic selection: 4th model, 20 topics, topics 5 & 14
 model_stm[[4]]$theta # doc-topic matrix - row is doc and column is probability it is in that topic
-model_stm[[4]]$theta[, 5]
-model_stm[[4]]$theta[, 14]
+model_stm[[4]]$theta[, 5] # wildlife/conservation/biodiversity topic
+model_stm[[4]]$theta[, 14] # climate/carbon topic
 
-# word clouds
+# generate word clouds
 topic_5_gradient_colors <- colorRampPalette(c("darkblue", "blue", "deepskyblue", "darkturquoise", "cadetblue3"))(20)
 cloud(model_stm[[4]], topic = 5, scale = c(2,.25), max.words = 40, color = topic_5_gradient_colors)
 topic_14_gradient_colors <- colorRampPalette(c("darkgreen", "forestgreen", "chartreuse3", "darkseagreen3", "darkseagreen2"))(20)
-cloud(model_stm[[4]], topic = 14, scale = c(2,.25), max.words = 40, color = topic_14_gradient_colors)
+cloud(model_stm[[4]], topic = 18, scale = c(2,.25), max.words = 40, color = topic_14_gradient_colors)
 
 # plot env capex percentage data for energy firms
 filtered_data <- textData %>%
@@ -97,14 +95,44 @@ filtered_data <- textData %>%
 agg_data <- filtered_data %>%
   group_by(company_ticker) %>%
   summarise(total_spending_percentage = 100 * sum(env_capex) / sum(capex))
-ggplot(agg_data, aes(x = company_ticker, y = total_spending_percentage)) +
-  geom_bar(stat = "identity") +
+color_palette <- scales::viridis_pal(option = "D")(length(unique(agg_data$company_ticker)))
+ggplot(agg_data, aes(x = company_ticker, y = total_spending_percentage, , fill = company_ticker)) +
+  geom_bar(stat = "identity") + scale_fill_manual(values = color_palette) +
   labs(x = "Company Ticker", y = "Environmental Percentage of Capex", title = "Environmental Spending by Company") + scale_y_continuous(limits=c(0,100))
+
+# create a PCA
+pca_data <- model_stm[[4]]$theta
+pca_data <- cbind(textData,pca_data)
+pca_input <-pca_data    %>% 
+  group_by(company_ticker,company_type)  %>%
+  select(-capex,-env_capex,-year,-doc_id,-text,-part) %>%
+  summarise_all(mean)
+pca_mat<-as.matrix(pca_input%>%ungroup()%>%select(-company_ticker,-company_type))
+
+fit  <-prcomp(pca_mat)
+res.var <- get_pca_var(fit) # Outputs which variables (topics) contribute the most to each dimension ~ aka the variation in the data
+ind.var <- get_pca_ind(fit)
+pc1 <- ind.var$coord[,1]
+pc2 <- ind.var$coord[,2]
+pca_input$dim1 <- pc1 # first principle component
+pca_input$dim2 <- pc2 # second principle component
+res.var$contrib # see dim topic contributions
+
+ggplot(pca_input,aes(x=dim1,y=dim2,colour=company_type))+geom_point() +
+  labs(title = "Principal Component Analysis",
+       x = "Solar/Green Topic",
+       y = "Electricity/Power/Efficiency Topic",
+       color = "Company Type") +
+  scale_color_manual(
+    guide = guide_legend(),
+    labels = c('Clean Energy', 'Energy'),
+    values = c('springgreen3', 'firebrick2')
+  )
 
 # correlate the green columns of theta (the topics) with the capex data
 averaged_data <- model_stm[[4]]$theta
 averaged_data <- cbind(textData,averaged_data)
-averaged_data <-averaged_data %>% group_by(company_ticker,year,company_type) %>%summarise(capex    = mean(env_capex/capex),
+averaged_data <-averaged_data %>% group_by(company_ticker,year,company_type) %>% summarise(capex    = mean(env_capex/capex),
                                                                           topic_5  = mean(`5`),
                                                                           topic_14 = mean(`14`)) %>%
                                                                           mutate(topic_avg=(topic_5+topic_14)/2)
@@ -114,38 +142,14 @@ averaged_data_company <-averaged_data %>% group_by(company_ticker,company_type) 
                                                                                           topic_14 = mean(`14`)) %>%
   mutate(topic_avg=(topic_5+topic_14)/2)
 
-## Create a PCA
-pca_data <- model_stm[[4]]$theta
-pca_data <- cbind(textData,pca_data)
-pca_input <-pca_data    %>% 
-  group_by(company_ticker,company_type)  %>%
-  select(-capex,-env_capex,-year,-doc_id,-text,-part) %>%
-  summarise_all(mean)
-
-pca_mat<-as.matrix(pca_input%>%ungroup()%>%select(-company_ticker,-company_type))
-
-fit  <-prcomp(pca_mat)
-res.var <- get_pca_var(fit) # this tells you which variables (in our case, topics) contribute the most to each dimension/the variation in the data
-ind.var <- get_pca_ind(fit)
-pc1 <- ind.var$coord[,1]
-pc2 <- ind.var$coord[,2]
-pca_input$dim1 <- pc1 #first principle component (res var will tell you which topics contributed to this dimension)
-pca_input$dim2 <- pc2 #second principle component
-
-res.var$contrib # see dim topic contributions - shows reports are distinguishable
-
-
-# differentiated based on green business model - clean energy companies look like oil companies sometimes - trying to hide their efforts a bit
-ggplot(pca_input,aes(x=dim1,y=dim2,colour=company_type))+geom_point()
-
 #convert tthis to a matrix and run PCA. Then plot first two components and color each dot by company type
 
 ggplot(averaged_data %>%filter(company_type=="energy"), aes(x = capex, y = topic_avg)) +
   geom_point() +
   geom_smooth(method = "lm", se = TRUE) + # method = "lm" adds regression, se = TRUE adds confidence interval
-  labs(title = "Topic Probability vs. Env Capex Percentage",
-       x = "Environmental Capex Percentage",
-       y = "Topic Probability") +
+  labs(title = "PCA",
+       x = "PCA",
+       y = "Electricity/Power/Efficiency Topic") +
   theme_minimal()
 
 ggplot(averaged_data %>%filter(company_type=="energy"), aes(x = capex, y = topic_5)) +
