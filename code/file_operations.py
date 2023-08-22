@@ -1,9 +1,10 @@
+# helper script to preprocess-sustainability-reports.py
+
 import os
 from os.path import exists, isfile, join
 import shutil
 from pathlib import Path
 import fileinput
-#import dask.dataframe as dd
 import pandas as pd
 from tqdm import tqdm
 
