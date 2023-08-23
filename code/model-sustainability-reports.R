@@ -98,7 +98,7 @@ agg_data <- filtered_data %>%
 color_palette <- scales::viridis_pal(option = "D")(length(unique(agg_data$company_ticker)))
 ggplot(agg_data, aes(x = company_ticker, y = total_spending_percentage, fill = company_ticker)) +
   geom_bar(stat = "identity") + scale_fill_manual(values = color_palette) +
-  labs(x = "Company Ticker", y = "Environmental Percentage of Capex", title = "Environmental Spending by Company") + scale_y_continuous(limits=c(0,100))
+  labs(x = "Company Ticker", y = "Environmental Percentage of Capex", title = "Environmental Spending by Company") + scale_y_continuous(limits=c(0,25))
 
 # generate a principal component analysis (pca)
 pca_data <- model_stm[[4]]$theta
