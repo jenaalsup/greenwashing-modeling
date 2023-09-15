@@ -78,6 +78,22 @@ coherence_scores <- lapply(model_stm, function(model) {
 average_coherence_per_model <- sapply(coherence_scores, mean)
 print(average_coherence_per_model)
 
+# prepare semantic coherence score data for plotting
+coherence_scores_plot <- data.frame(
+  Number_of_Topics = kk,
+  Avg_Coherence_Score = average_coherence_per_model
+)
+
+# plot average semantic coherence scores vs. number of topics
+ggplot(coherence_scores_plot, aes(x = Number_of_Topics, y = Avg_Coherence_Score)) +
+  geom_point() +
+  geom_line() +  # Add a line connecting the points
+  labs(
+    x = "Number of Topics",
+    y = "Semantic Coherence Score",
+    title = "Semantic Coherence by Number of Topics"
+  )
+
 # topic selection: 4th model, 20 topics, topics 5 & 14
 model_stm[[4]]$theta # doc-topic matrix - row is doc and column is probability it is in that topic
 model_stm[[4]]$theta[, 5] # wildlife/conservation/biodiversity topic
