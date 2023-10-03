@@ -11,6 +11,8 @@ library(wordcloud)
 library(RColorBrewer)
 library(stats)
 library(factoextra)
+library(viridis)
+library(stringr)
 
 # load data
 textData <- read.csv("reports/processed_reports/processed-data.csv")
@@ -110,11 +112,14 @@ filtered_data <- textData %>%
   filter(company_type == "energy")
 agg_data <- filtered_data %>%
   group_by(company_ticker) %>%
-  summarise(total_spending_percentage = 100 * sum(env_capex) / sum(capex))
+  summarise(total_spending_percentage = 100 * sum(coalesce(env_capex, 0)) / sum(coalesce(capex, 0)))
 color_palette <- scales::viridis_pal(option = "D")(length(unique(agg_data$company_ticker)))
-ggplot(agg_data, aes(x = company_ticker, y = total_spending_percentage, fill = company_ticker)) +
-  geom_bar(stat = "identity") + scale_fill_manual(values = color_palette) +
-  labs(x = "Company Ticker", y = "Environmental Percentage of Capex", title = "Environmental Spending by Company") + scale_y_continuous(limits=c(0,25))
+agg_data$total_spending_percentage[is.na(agg_data$total_spending_percentage)] <- 0
+ggplot(agg_data, aes(x = reorder(str_to_upper(company_ticker), total_spending_percentage), y = total_spending_percentage, fill = total_spending_percentage)) +
+  geom_bar(stat = "identity") +
+  scale_fill_gradient(low = "firebrick1", high = "chartreuse3", guide = "legend") +
+  labs(x = "Company Ticker Symbol", y = "Environmental Percentage of Capex", title = "Environmental Spending by Company") +
+  scale_y_continuous(limits = c(0, 18))
 
 # generate a principal component analysis (pca)
 pca_data <- model_stm[[4]]$theta
