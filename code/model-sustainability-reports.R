@@ -13,6 +13,7 @@ library(stats)
 library(factoextra)
 library(viridis)
 library(stringr)
+library(tidyr)
 
 # load data
 textData <- read.csv("reports/processed_reports/processed-data.csv")
@@ -220,3 +221,58 @@ ggplot(averaged_data %>%filter(company_type=="energy",year>2020), aes(x = 100*ca
        x = "Environmental Capex Percentage",
        y = "Climate Topic Probability") +
   theme_minimal()
+
+
+###############
+# 2024 updates
+###############
+
+# wordclouds over time
+textData_before_2018 <- subset(textData, year < 2018)
+textData_after_2018 <- subset(textData, year >= 2018)
+N_before_2018 <- nrow(textData_before_2018)
+dfm_speeches_before_2018 <- dfm(tokens(corpus(textData_before_2018$text), remove_punct = TRUE, remove_numbers = TRUE, stem = TRUE)) %>%
+  dfm_trim(min_termfreq = 15, min_docfreq = 0.01 * N_before_2018, max_docfreq = 0.8 * N_before_2018)
+N_after_2018 <- nrow(textData_after_2018)
+dfm_speeches_after_2018 <- dfm(tokens(corpus(textData_after_2018$text), remove_punct = TRUE, remove_numbers = TRUE, stem = TRUE)) %>%
+  dfm_trim(min_termfreq = 15, min_docfreq = 0.01 * N_after_2018, max_docfreq = 0.8 * N_after_2018)
+model_stm_before_2018 <- stm(documents = dfm_speeches_before_2018, 
+                             prevalence = ~ factor(company_type) + factor(year),
+                             K = 20, max.em.its = 200,
+                             data = textData_before_2018,
+                             init.type = "Spectral", seed = 153332)
+model_stm_after_2018 <- stm(documents = dfm_speeches_after_2018, 
+                            prevalence = ~ factor(company_type) + factor(year),
+                            K = 20, max.em.its = 200,
+                            data = textData_after_2018,
+                            init.type = "Spectral", seed = 153332)
+cloud(model_stm_before_2018, topic = 5, scale = c(2, .25), max.words = 40, color = topic_5_gradient_colors)
+cloud(model_stm_after_2018, topic = 5, scale = c(2, .25), max.words = 40, color = topic_5_gradient_colors)
+cloud(model_stm_before_2018, topic = 14, scale = c(2, .25), max.words = 40, color = topic_14_gradient_colors)
+cloud(model_stm_after_2018, topic = 14, scale = c(2, .25), max.words = 40, color = topic_14_gradient_colors)
+
+# wordclouds by firm type
+textData_clean_energy <- subset(textData, company_type == "clean-energy")
+textData_energy <- subset(textData, company_type == "energy")
+N_clean_energy <- nrow(textData_clean_energy)
+dfm_speeches_clean_energy <- dfm(tokens(corpus(textData_clean_energy$text), remove_punct = TRUE, remove_numbers = TRUE, stem = TRUE)) %>%
+  dfm_trim(min_termfreq = 15, min_docfreq = 0.01 * N_clean_energy, max_docfreq = 0.8 * N_clean_energy)
+N_energy <- nrow(textData_energy)
+dfm_speeches_energy <- dfm(tokens(corpus(textData_energy$text), remove_punct = TRUE, remove_numbers = TRUE, stem = TRUE)) %>%
+  dfm_trim(min_termfreq = 15, min_docfreq = 0.01 * N_energy, max_docfreq = 0.8 * N_energy)
+model_stm_clean_energy <- stm(documents = dfm_speeches_clean_energy, 
+                             prevalence = ~ factor(year),
+                             K = 20, max.em.its = 200,
+                             data = textData_clean_energy,
+                             init.type = "Spectral", seed = 153332)
+model_stm_energy <- stm(documents = dfm_speeches_energy, 
+                            prevalence = ~ factor(year),
+                            K = 20, max.em.its = 200,
+                            data = textData_energy,
+                            init.type = "Spectral", seed = 153332)
+cloud(model_stm_clean_energy, topic = 5, scale = c(2, .25), max.words = 40, color = topic_5_gradient_colors)
+cloud(model_stm_energy, topic = 5, scale = c(2, .25), max.words = 40, color = topic_5_gradient_colors)
+cloud(model_stm_clean_energy, topic = 14, scale = c(2, .25), max.words = 40, color = topic_14_gradient_colors)
+cloud(model_stm_energy, topic = 14, scale = c(2, .25), max.words = 40, color = topic_14_gradient_colors)
+
+
